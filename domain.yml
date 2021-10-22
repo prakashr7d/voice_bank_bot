@@ -1,0 +1,50 @@
+version: "2.0"
+
+intents:
+  - greet
+  - affirm
+  - say_state
+  - faq
+  - ask_name
+  - how_are_you
+  - thankyou
+  - complement
+  - my_age
+  - good_bye
+entities:
+  - GPE
+
+slots:
+  GPE:
+    type: "text"
+
+
+responses:
+  utter_ask_name:
+  - text: "Gabby.mp3"
+  utter_greet:
+  - text: "welcome.mp3"
+  utter_age:
+  - text: "age.mp3"
+  utter_state_you_live_in:
+  - text: "state-you-live-in.mp3"
+  utter_transfer:
+  - text: "transfer.mp3"
+  utter_good_bye:
+  - text: "bye.mp3"
+  utter_how_are_you:
+  - text: "im-doing-great.mp3 "
+  utter_my_age:
+  - text: "my-age.mp3"
+  utter_complement:
+  - text: "thank-you.mp3"
+  utter_welcome:
+  - text: "you-welcome.mp3"
+
+
+actions:
+  - action_check_new_york
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

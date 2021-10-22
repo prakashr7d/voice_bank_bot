@@ -1,0 +1,146 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hello!
+    - Hey
+    - Hey Sara
+    - Hey bot
+    - Heya
+    - Heylo
+    - Hi
+    - Hi there
+    - Hi!
+    - Hi'
+    - Whats up my bot
+    - Whats up?
+    - ayyyy whaddup
+    - heyo
+    - hhola
+    - hi
+    - hi !
+
+
+- intent: affirm
+  examples: |
+    - SURE
+    - Sure
+    - Sweet
+    - That would be great
+    - YES
+    - YUP
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - i am 28 next month
+    - i am 15
+    - 20
+    - I am good enough ag
+    - Yes, I accept
+    - Yes.
+    - Yup
+    - yay
+    - ye
+    - ye splease
+    - yea
+    - really
+
+- intent: faq/ask_name
+  examples: |
+    - What is your name?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+
+
+- intent: say_state
+  examples: |
+    - I am in New work
+    - i am in Montana
+    - alaska
+    - texas
+    - virginia
+
+
+- intent: how_are_you
+  examples: |
+    - Ahoy matey how are you?
+    - Are you ok?
+    - Do you feel good?
+    - Do you have a great day?
+    - HI Sara, what are you up to?
+    - Hi Sara! How are you?
+    - How are You?
+    - How are things?
+    - How are you
+    - How are you men?
+    - How are you today?
+    - How are you?
+
+- intent: my_age
+  examples: |
+    - Do you have friends the same age as you, if so, how old are they?
+    - How long have you been alive?
+    - How long have you been around?
+    - How long have you occupied the earth?
+    - How many candles were on your last birthday cake?
+    - How many years have you been alive?
+    - How many years have you lived?
+    - How old are you?
+    - How old were you on your last birthday?
+    - How old will you be on your next birthday?
+    - Tell me your day, month and year of birth.
+    - What is your age?
+    - What is your birthdate?
+    - What is your count of years being alive so far?
+    - What was your age on your last birthday?
+    - What will be your age on your next birthday?
+
+
+- intent: complement
+  examples: |
+    - you have a sweet voice
+    - you have a nice voice
+    - you have a wonderful voice
+    - your voice is beautiful
+
+- intent: thankyou
+  examples: |
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you
+    - Thank you Sara
+    - Thank you so much
+    - Thank's!
+    - Thanks
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cheers
+    - cheers bro
+    - cool thank you
+    - cool thanks
+    - cool, thanks
+    - danke
+    - great thanks
+    - ok thanks
+
+- intent: good_bye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+

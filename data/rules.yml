@@ -1,0 +1,53 @@
+version: "2.0"
+
+rules:
+- rule: respond to chitchat
+  steps:
+  - intent: ask_name
+  - action: utter_ask_name
+
+- rule: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+
+- rule: affirm to age
+  steps:
+  - intent: affirm
+  - action: utter_state_you_live_in
+
+- rule: transfer
+  steps:
+  - intent: say_state
+  - action: action_check_new_york
+
+- rule: ask_name
+  steps:
+  - intent: ask_name
+  - action: utter_ask_name
+
+- rule: bye
+  steps:
+  - intent: good_bye
+  - action: utter_good_bye
+
+- rule: how_are_you
+  steps:
+  - intent: how_are_you
+  - action: utter_how_are_you
+
+- rule: utter_my_age
+  steps:
+  - intent: my_age
+  - action: utter_my_age
+
+- rule: complement
+  steps:
+  - intent: complement
+  - action: utter_complement
+
+- rule: thankyou
+  steps:
+  - intent: thankyou
+  - action: utter_welcome
