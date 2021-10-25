@@ -5,6 +5,11 @@ nlu:
   examples: |
     - Hello!
     - Hey
+    - Hello, how's it going
+    - heyyy
+    - hallo
+    - Hey, how are you
+    - howdy
     - Hey Sara
     - Hey bot
     - Heya
@@ -20,8 +25,6 @@ nlu:
     - hhola
     - hi
     - hi !
-
-
 - intent: affirm
   examples: |
     - SURE
@@ -38,7 +41,17 @@ nlu:
     - i am 28 next month
     - i am 15
     - 20
+    - 28
+    - 30
+    - 50
+    - twenty
+    - 72
+    - seventeen
+    - fifty six
     - I am good enough ag
+    - i'm old
+    - am old
+    - i'm too old
     - Yes, I accept
     - Yes.
     - Yup
@@ -47,15 +60,14 @@ nlu:
     - ye splease
     - yea
     - really
-
 - intent: faq/ask_name
   examples: |
     - What is your name?
+    - what's your names
+    - and your name is?
     - May I know your name?
     - What do people call you?
     - Do you have a name for yourself?
-
-
 - intent: say_state
   examples: |
     - I am in New work
@@ -63,12 +75,28 @@ nlu:
     - alaska
     - texas
     - virginia
-
-
+    - i live in Florida
+    - i'm in Nebraska
+    - i'm currently in New Jersey
+    - North Carolina
+    - South Carolina
+    - California
+    - i'm in Delaware
+    - born and raise in Louisiana
+    - Georgia
+    - Idaho
+    - Chicago
+    - Washington
 - intent: how_are_you
   examples: |
     - Ahoy matey how are you?
     - Are you ok?
+    - How's it going?
+    - how's it going
+    - what's going on
+    - what's cooking
+    - whaddup
+    - How you living
     - Do you feel good?
     - Do you have a great day?
     - HI Sara, what are you up to?
@@ -79,7 +107,6 @@ nlu:
     - How are you men?
     - How are you today?
     - How are you?
-
 - intent: my_age
   examples: |
     - Do you have friends the same age as you, if so, how old are they?
@@ -98,15 +125,24 @@ nlu:
     - What is your count of years being alive so far?
     - What was your age on your last birthday?
     - What will be your age on your next birthday?
-
-
 - intent: complement
   examples: |
     - you have a sweet voice
+    - you sound nice
+    - you have such a beautiful voice
+    - your voice is cute
+    - you sound cute
+    - what a lovely voice you have
+    - you sound just like my daughter
+    - you sound just like my grand daughter
+    - cute voice
+    - I bet you are cute
+    - sounds like you're a beautiful girl
+    - Gabby, that's a cute name
+    - your name is beautiful
     - you have a nice voice
     - you have a wonderful voice
     - your voice is beautiful
-
 - intent: thankyou
   examples: |
     - Cool. Thanks
@@ -128,7 +164,6 @@ nlu:
     - danke
     - great thanks
     - ok thanks
-
 - intent: good_bye
   examples: |
     - good afternoon
@@ -142,5 +177,3 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
-
