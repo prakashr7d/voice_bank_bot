@@ -22,8 +22,6 @@ pipeline:
      model: "en_core_web_md"
    - name: SpacyEntityExtractor
      dimensions: [ "GPE" ]
-   - name: ResponseSelector
-     epochs: 100
    - name: FallbackClassifier
      threshold: 0.3
      ambiguity_threshold: 0.1

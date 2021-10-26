@@ -4,13 +4,14 @@ intents:
   - greet
   - affirm
   - say_state
-  - faq
   - ask_name
   - how_are_you
   - thankyou
-  - complement
+  - complemen
   - my_age
   - good_bye
+  - out_of_scope
+  - transfer_me_where
 entities:
   - GPE
 
@@ -22,6 +23,8 @@ slots:
 responses:
   utter_ask_name:
   - text: "Gabby.mp3"
+  - text: "whats-your-name.mp3"
+  - text: "name.mp3"
   utter_greet:
   - text: "welcome.mp3"
   utter_age:
@@ -40,7 +43,18 @@ responses:
   - text: "thank-you.mp3"
   utter_welcome:
   - text: "you-welcome.mp3"
-
+  utter_fallback:
+  - text: "good-fallback-when-dont-understand.mp3"
+  - text: "when-ai-dont-understand-fallback.mp3"
+  - text: "when-cant-hear.mp3"
+  utter_life_insurance:
+  - text: "what-are-you-selling-again.mp3"
+  utter_out_of_scope:
+  - text: "im-sorry-out-of-scope.mp3"
+  - text: "out-of-scope.mp3"
+  - text: "out-of-scope-2.mp3"
+  utter_transfer_me_where:
+  - text: "transfer-me-where.mp3"
 
 actions:
   - action_check_new_york

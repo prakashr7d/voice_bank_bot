@@ -60,7 +60,7 @@ nlu:
     - ye splease
     - yea
     - really
-- intent: faq/ask_name
+- intent: ask_name
   examples: |
     - What is your name?
     - what's your names
@@ -177,3 +177,57 @@ nlu:
     - see you around
     - bye bye
     - see you later
+- intent: what_are_you_selling
+  examples: |
+    - what are you selling
+    - what is this call about
+    - What is the product
+    - what is it bout
+    - why is this call
+- intent: out_of_scope
+  examples: |
+    - what technology is this made of?
+    - i immediately need help with implementing the coolest bot you can imagine
+    - i m looking for job
+    - i told you already
+    - i wanna party
+    - i want a non dripping ice cream
+    - i want caffe
+    - i want food
+    - i want good flycam
+    - i want more of you in my life!
+    - i want pizza
+    - i want pizza!!
+    - i want to book a hotel
+    - i want to buy a roomba for my grandson
+    - i want to eat
+    - i want to find new friends
+    - i want to find out what you can build with rasa
+    - i want to fly
+    - i want to grab lunch
+    - i want to know current situtation in pakistan
+    - i want to order a pizza
+    - i want to see your happy customers
+    - i will tame a mouse for you
+    - is [John Lewis](name) still married to you
+    - is it a wasteland full of broken robot parts?
+    - is it allow to
+    - is rasa a studio?
+    - is rasa any good
+    - is that any of your business
+- intent: transfer_me_where
+  examples: |
+    - where are you transfering me
+    - what agent are you transfering me
+    - which agent
+    - agent name
+    - who am i going to talk
+
+#- intent:
+#  examples:
+#- intent:
+#  examples:
+#- intent:
+#  examples:
+#- intent:
+#  examples:

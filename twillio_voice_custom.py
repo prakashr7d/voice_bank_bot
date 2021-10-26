@@ -297,7 +297,8 @@ class TwilioVoiceInput(InputChannel):
             else:
                 voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                 voice_response.pause(length=1)
-
+            if message == "take-me-off.mp3":
+                voice_response.hangup()
         return voice_response
 
 

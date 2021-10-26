@@ -1,4 +1,1 @@
-duration = {
-    "welcome.mp3": 8,
-    "age.mp3": 0
-}
+NEWYORK = ["new york", "new yorrk", "newyork"]

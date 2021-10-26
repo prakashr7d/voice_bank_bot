@@ -12,6 +12,8 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+from constants import NEWYORK
+
 
 class ActionHelloWorld(Action):
 
@@ -22,11 +24,11 @@ class ActionHelloWorld(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        state = tracker.get_slot("GPE")
+        state: Text = tracker.get_slot("GPE")
         print(state)
         dispatcher.utter_message(state)
-        if state == "new york":
-            dispatcher.utter_message("end of call")
+        if state.lower() in NEWYORK:
+            dispatcher.utter_message("not-qualified.mp3")
         else:
             dispatcher.utter_message(template="utter_transfer")
 
