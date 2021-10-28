@@ -2,6 +2,7 @@ from sanic import Blueprint, response
 from sanic.request import Request
 from sanic.response import HTTPResponse
 from twilio.twiml.voice_response import VoiceResponse, Gather
+
 from typing import Text, Callable, Awaitable, List, Any, Dict, Optional
 
 import rasa.utils.io
@@ -299,6 +300,9 @@ class TwilioVoiceInput(InputChannel):
                 voice_response.pause(length=1)
             if message == "take-me-off.mp3":
                 voice_response.hangup()
+            if message == "transfer.mp3":
+                voice_response.dial(number="+12722250973")
+
         return voice_response
 
 
