@@ -25,6 +25,153 @@ nlu:
     - hhola
     - hi
     - hi !
+    - Bom dia
+    - Bonjour
+    - Good Morning
+    - Good morning
+    - Good mourning
+    - Guten Morgen
+    - HELLO
+    - HEY
+    - HEllo
+    - HI
+    - HI Sara
+    - Hallo
+    - Hei
+    - Hellllooooooo
+    - Hello
+    - Hello Bot
+    - Hello Rasa
+    - Hello Sara
+    - Hello sara
+    - Hello!
+    - Hey
+    - Hey Sara
+    - Hey bot
+    - Heya
+    - Heylo
+    - Hi
+    - Hi Sara
+    - Hi Sara!
+    - Hi bot
+    - Hi man
+    - Hi rasa
+    - Hi sara
+    - Hi sara..
+    - Hi there
+    - Hi!
+    - Hi'
+    - Hi,
+    - Hi, bot
+    - Hieee
+    - Hieeeeeeeeeeeee
+    - Hola
+    - I said, helllllloooooO!!!!
+    - Well hello there ;)
+    - What is up?
+    - Whats up
+    - Whats up my bot
+    - Whats up?
+    - ayyyy whaddup
+    - bonjour
+    - ey boss
+    - good evening
+    - good moring
+    - good morning
+    - greet
+    - greetings
+    - hai
+    - hallo
+    - hallo sara
+    - halloo
+    - halloooo
+    - halo
+    - halo sara
+    - heeey
+    - heelio
+    - hell9o
+    - hellio
+    - hello
+    - hello Sara
+    - hello everybody
+    - hello friend
+    - hello hi
+    - hello is anybody there
+    - hello it is me again
+    - hello robot
+    - hello sara
+    - hello sweatheart
+    - hello sweet boy
+    - hello there
+    - hello world
+    - hello, my name is [Charles Pfeffer](name)
+    - hello?
+    - hello]
+    - hellooo
+    - helloooo
+    - helo
+    - hey
+    - hey bot
+    - hey bot!
+    - hey dude
+    - hey hey
+    - hey let's talk
+    - hey rasa
+    - hey sara
+    - hey ther
+    - hey there
+    - hey there boy
+    - hey there..
+    - hey, let's talk
+    - hey, sara!
+    - heya
+    - heyho
+    - heyo
+    - hhola
+    - hi
+    - hi !
+    - hi Mister
+    - hi again
+    - hi can you speak ?
+    - hi folks
+    - hi friend
+    - hi friends
+    - hi hi
+    - hi i'm [Sandra Hernandez](name)
+    - hi im [Amanda Anderson](name)
+    - hi mrs rasa
+    - hi pal!
+    - hi sara
+    - hi there
+    - hi there it's me
+    - hi!
+    - hi.........................................................
+    - hi?
+    - hieee
+    - hii
+    - hiihihi
+    - hiii
+    - hlo
+    - hola
+    - howdy
+    - i am [Karen Mease](name)
+    - jojojo
+    - jop
+    - konichiwa
+    - merhaba
+    - ola sara
+    - rasa hello
+    - salut
+    - sup
+    - wasssup
+    - wasssup!
+    - what up
+    - whats popping
+    - whats up
+    - yo
+    - yoo
+    - ssup?
+    - helleo
 - intent: affirm
   examples: |
     - SURE
@@ -44,6 +191,21 @@ nlu:
     - 28
     - 30
     - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
     - twenty
     - 72
     - seventeen
@@ -59,6 +221,230 @@ nlu:
     - ye
     - ye splease
     - yea
+    - really
+    - Accept
+    - Awesome!
+    - Good
+    - Great
+    - I accept
+    - I accept.
+    - I agree
+    - I am using it
+    - I changed my mind. I want to accept it
+    - I do
+    - I get it
+    - I guess so
+    - I have used it in the past
+    - I will
+    - I'd absolutely love that
+    - I'm sure I will!
+    - I'm using it
+    - Nice
+    - OK
+    - Ofcourse
+    - Oh yes
+    - Oh, ok
+    - Ok
+    - Ok let's start
+    - Ok.
+    - Okay
+    - Okay!
+    - PLEASE
+    - SURE
+    - Sure
+    - Sweet
+    - That would be great
+    - YES
+    - YUP
+    - Yea
+    - Yeah
+    - Yeah sure
+    - Yep
+    - Yep that's fine
+    - Yep!
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - Yes, I accept
+    - Yes.
+    - Yup
+    - a little
+    - absolutely
+    - accept
+    - accepted
+    - agreed
+    - ah ok
+    - alright
+    - alright, cool
+    - amayzing
+    - amazing!
+    - awesome
+    - awesome!
+    - confirm
+    - cool story bro
+    - definitely yes without a doubt
+    - done
+    - fair enough
+    - fcourse
+    - fine
+    - fuck yeah!
+    - go
+    - go ahead
+    - go for it
+    - going super well
+    - good.
+    - great
+    - great lets do that
+    - great!
+    - hell yeah
+    - hell yes
+    - hm, i'd like that
+    - how nice!
+    - i accept
+    - i agree
+    - i am!
+    - i want that
+    - i will!
+    - it is ok
+    - its okay
+    - ja
+    - ja cool
+    - ja thats great
+    - jezz
+    - jo
+    - k
+    - kk
+    - lets do it
+    - lets do this
+    - not bad
+    - of course
+    - ofcoure i do
+    - ofcourse
+    - oh awesome!
+    - oh cool
+    - oh good !!
+    - oh super
+    - ok
+    - ok cool
+    - ok fine
+    - ok friend
+    - ok good
+    - ok great
+    - ok i accept
+    - ok sara
+    - ok, I behave now
+    - ok, I understood
+    - ok, Sara
+    - ok...
+    - okay
+    - okay cool
+    - okay sure
+    - okay..
+    - oki doki
+    - okie
+    - ook
+    - oui
+    - perfect
+    - please
+    - si
+    - sort of
+    - sure
+    - sure thing
+    - sure!
+    - that is cool
+    - that ok
+    - that sounds fine
+    - that's great
+    - thats fine
+    - thats good
+    - thats great
+    - top
+    - uh-huh
+    - very much
+    - well yes
+    - ya
+    - ya cool
+    - ya go for it
+    - ya i want
+    - ya please
+    - ya thats cool
+    - yaah
+    - yap
+    - yaps
+    - yas
+    - yay
+    - ye
+    - ye splease
+    - yea
+    - yeah
+    - yeah do that
+    - yeah sure
+    - yeah'=
+    - yeah, why not
+    - yeeeeezzzzz
+    - yeeees
+    - yep
+    - yep i want that
+    - yep if i have to
+    - yep please
+    - yep that's nice
+    - yep thats cool
+    - yep, will do thank you
+    - yep. :/
+    - yes
+    - yes ...
+    - yes I do
+    - yes accept please
+    - yes baby
+    - yes cool
+    - yes give me information
+    - yes go ahead
+    - yes go for it
+    - yes great
+    - yes i accept
+    - yes i agree
+    - yes i have built a bot before
+    - yes i have!
+    - yes it is
+    - yes it was okay
+    - yes of course
+    - yes pleae
+    - yes please
+    - yes please!
+    - yes pls
+    - yes sirfr
+    - yes that's great
+    - yes that's what i want
+    - yes you can
+    - yes'
+    - yes, I'd love to
+    - yes, cool
+    - yes, give me information, please
+    - yes,i am
+    - yes.
+    - yesh
+    - yess
+    - yessoo
+    - yesss
+    - yesssss
+    - yesyestyes
+    - yesyesyes
+    - yez
+    - yop
+    - you asked me a yes or no question, which i answered with yes
+    - you got me, I accept, if you want me to
+    - yres
+    - ys
+    - yup
+    - yyeeeh
+    - Okay cool
+    - ok..
+    - considering
+    - More a less
+    - cool beans
+    - sounds good!
     - really
 - intent: ask_name
   examples: |
@@ -87,6 +473,18 @@ nlu:
     - Idaho
     - Chicago
     - Washington
+    - i live in the great state of Delaware
+    - I live in the Big apple
+    - Idaho
+    - we're up in Virginia
+    - i'm in cali
+    - i live in Cali
+    - so Cal
+    - so Flo
+    - the twin state
+    - state
+    - the music state
+    - flawda
 - intent: how_are_you
   examples: |
     - Ahoy matey how are you?
@@ -143,6 +541,7 @@ nlu:
     - you have a nice voice
     - you have a wonderful voice
     - your voice is beautiful
+    - you sound amazing
 - intent: thankyou
   examples: |
     - Cool. Thanks
@@ -164,6 +563,9 @@ nlu:
     - danke
     - great thanks
     - ok thanks
+    - merci
+    - tanks
+    - solid thanks
 - intent: good_bye
   examples: |
     - good afternoon
@@ -177,6 +579,20 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - alright bye
+    - ight by
+    - ba
+    - later
+    - latr
+    - au revoir
+    - see u
+    - imma go now
+    - im hanging up now
+    - hanging up
+    - i'm going now
+    - bye bye
+    - bah bah
+    - bye now
 - intent: what_are_you_selling
   examples: |
     - what are you selling
@@ -184,12 +600,24 @@ nlu:
     - What is the product
     - what is it bout
     - why is this call
+    - what is this? an ad
+    - why are you calling me so early
+    - why are you calling me so late
+    - what's this about
+    - whats this about
+    - about
+    - what kind
 - intent: out_of_scope
   examples: |
     - what technology is this made of?
     - i immediately need help with implementing the coolest bot you can imagine
     - i m looking for job
     - i told you already
+    - what are you going to do for me anyway
+    - you think you can call to my house and tell me what to do
+    - do you do drug
+    - i do have insurance but i want to get something for my  wife insurance, can i do that
+    - listen, don't think i don't know that you're annying as shit.
     - i wanna party
     - i want a non dripping ice cream
     - i want caffe
@@ -217,11 +645,19 @@ nlu:
     - is that any of your business
 - intent: transfer_me_where
   examples: |
-    - where are you transfering me to
+    - where are you transfering me
     - what agent are you transfering me
     - which agent
     - agent name
     - who am i going to talk
+    - where are you transferring me
+    - I thought you were the agent
+    - why do you have to transfer me
+    - but i like talking to you
+    - why
+    - i don't want to talk to other people though
+    - how long will that take
+    - how long
 
 #- intent:
 #  examples:

@@ -7,7 +7,7 @@ intents:
   - ask_name
   - how_are_you
   - thankyou
-  - complemen
+  - complement
   - my_age
   - good_bye
   - out_of_scope
