@@ -30,6 +30,7 @@ class ActionHelloWorld(Action):
         if state:
             if state.lower() in NEWYORK:
                 dispatcher.utter_message("not-qualified.mp3")
-                return []
-        dispatcher.utter_message(template="transfer.mp3")
+            else:
+                dispatcher.utter_message("transfer.mp3")
+        dispatcher.utter_message("transfer.mp3")
         return []
