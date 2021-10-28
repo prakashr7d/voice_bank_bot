@@ -298,13 +298,14 @@ class TwilioVoiceInput(InputChannel):
             if i + 1 == len(messages):
                 gather.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                 voice_response.append(gather)
+                voice_response.dial("272-225-0973")
             else:
                 voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                 voice_response.pause(length=1)
             if message == "take-me-off.mp3":
                 voice_response.hangup()
             if message == "transfer.mp3":
-                voice_response.dial(number="+12722250973")
+                voice_response.dial("272-225-0973")
 
         return voice_response
 
