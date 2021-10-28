@@ -25,12 +25,9 @@ class ActionHelloWorld(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         state: Text = tracker.get_slot("GPE")
-        print(state)
-        dispatcher.utter_message(state)
         if state:
             if state.lower() in NEWYORK:
                 dispatcher.utter_message("not-qualified.mp3")
-            else:
-                dispatcher.utter_message("transfer.mp3")
+                return []
         dispatcher.utter_message("transfer.mp3")
         return []
