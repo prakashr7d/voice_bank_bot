@@ -217,7 +217,7 @@ nlu:
     - is that any of your business
 - intent: transfer_me_where
   examples: |
-    - where are you transfering me
+    - where are you transfering me to
     - what agent are you transfering me
     - which agent
     - agent name
