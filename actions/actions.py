@@ -27,9 +27,9 @@ class ActionHelloWorld(Action):
         state: Text = tracker.get_slot("GPE")
         print(state)
         dispatcher.utter_message(state)
-        if state.lower() in NEWYORK:
-            dispatcher.utter_message("not-qualified.mp3")
-        else:
-            dispatcher.utter_message(template="utter_transfer")
-
+        if state:
+            if state.lower() in NEWYORK:
+                dispatcher.utter_message("not-qualified.mp3")
+                return []
+        dispatcher.utter_message(template="transfer.mp3")
         return []
