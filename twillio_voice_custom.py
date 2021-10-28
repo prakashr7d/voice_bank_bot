@@ -1,3 +1,5 @@
+import logging
+
 from sanic import Blueprint, response
 from sanic.request import Request
 from sanic.response import HTTPResponse
@@ -15,7 +17,7 @@ from rasa.core.channels.channel import (
     UserMessage,
 )
 
-
+logger = logging.Logger(__name__)
 class TwilioVoiceInput(InputChannel):
     """Input channel for Twilio Voice."""
 
@@ -292,7 +294,7 @@ class TwilioVoiceInput(InputChannel):
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
             msg_text = message["text"]
-            voice_response.dial(number="+12722250973")
+            logger.error(voice_response.dial(number="+12722250973"))
             if i + 1 == len(messages):
                 gather.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                 voice_response.append(gather)
