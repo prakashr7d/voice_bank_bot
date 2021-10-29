@@ -3,7 +3,7 @@ import logging
 from sanic import Blueprint, response
 from sanic.request import Request
 from sanic.response import HTTPResponse
-from twilio.twiml.voice_response import VoiceResponse, Gather
+from twilio.twiml.voice_response import VoiceResponse, Gather, Dial
 
 from typing import Text, Callable, Awaitable, List, Any, Dict, Optional
 
@@ -296,13 +296,16 @@ class TwilioVoiceInput(InputChannel):
             msg_text = message["text"]
             if i + 1 == len(messages):
                 gather.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                voice_response.append(gather)
+
             else:
                 voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                 voice_response.pause(length=1)
             if message == "take-me-off.mp3":
                 voice_response.hangup()
             if message == "transfer.mp3":
-                voice_response.dial("+918870539376")
+                Dial("+918870539376")
+                voice_response.append(Dial)
 
         return voice_response
 
