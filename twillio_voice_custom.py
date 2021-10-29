@@ -297,7 +297,6 @@ class TwilioVoiceInput(InputChannel):
             if i + 1 == len(messages):
                 voice_response.dial("+918870539376")
                 # gather.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
-                voice_response.append(gather)
             else:
                 # voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                 # voice_response.pause(length=1)
