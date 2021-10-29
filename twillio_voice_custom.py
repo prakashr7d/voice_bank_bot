@@ -295,7 +295,7 @@ class TwilioVoiceInput(InputChannel):
         for i, message in enumerate(messages):
             msg_text = message["text"]
             if i + 1 == len(messages):
-                if message == "transfer.mp3":
+                if msg_text == "transfer.mp3":
                     voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
                     voice_response.dial("+918870539376")
                     logger.error("got here")
@@ -304,8 +304,13 @@ class TwilioVoiceInput(InputChannel):
                     voice_response.append(gather)
 
             else:
-                voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
-                voice_response.pause(length=1)
+                if msg_text == "transfer.mp3":
+                    voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                    voice_response.dial("+918870539376")
+                    logger.error("got here")
+                else:
+                    voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                    voice_response.pause(length=1)
             if message == "take-me-off.mp3":
                 voice_response.hangup()
 
