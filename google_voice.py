@@ -17,7 +17,7 @@ class GoogleRecognise:
         )
         self.response = None
 
-    def open_audio(self, uri):
+    def open_audio(self):
         audio = speech.RecognitionAudio(uri=self.uri)
         return audio
 
