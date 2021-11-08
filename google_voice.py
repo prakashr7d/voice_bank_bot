@@ -1,15 +1,14 @@
+import os
 from typing import Text
 
 from google.cloud import speech
-import os
-import io
 
 
 class GoogleRecognise:
-    def __init__(self, default_file_name: Text):
+    def __init__(self, uri: Text):
         os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'google_secret_key.json'
         self.client = speech.SpeechClient()
-        self.file_name = default_file_name
+        self.uri = uri
         self.config = speech.RecognitionConfig(
             enable_automatic_punctuation=True,
             audio_channel_count=1,
@@ -18,10 +17,8 @@ class GoogleRecognise:
         )
         self.response = None
 
-    def open_audio(self):
-        with io.open(self.file_name, "rb") as audio_file:
-            content = audio_file.read()
-            audio = speech.RecognitionAudio(content=content)
+    def open_audio(self, uri):
+        audio = speech.RecognitionAudio(uri=self.uri)
         return audio
 
     def recognise(self):
