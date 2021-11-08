@@ -19,7 +19,7 @@ def run_rasa():
     text = recognise.get_response()
     print(text)
     response = requests.post(url="http://localhost:5005/webhooks/rest/webhook",
-                             json={"sender": sender, "message": text})
+                             jsshson={"sender": sender, "message": text})
     return jsonify(response.json())
 
 
@@ -27,4 +27,4 @@ def run_rasa():
 if __name__ == '__main__':
     # run() method of Flask class runs the application
     # on the local development server.
-    app.run()
+    app.run(port=2001, host="0.0.0.0")

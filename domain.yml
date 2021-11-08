@@ -3,15 +3,20 @@ version: "2.0"
 intents:
   - greet
   - affirm
-  - say_state
   - ask_name
   - how_are_you
-  - thankyou
-  - complement
-  - my_age
-  - good_bye
+  - where_did_you_get_number
+  - age
+  - type_of_medicare
+  - red_white_blue
   - out_of_scope
-  - transfer_me_where
+  - transfer
+  - wait_time
+  - fallback
+  - how_long_to_transfer
+  - i_dont_have_time
+  - why_are_you_calling
+  - i_dont_want_to_change
 entities:
   - GPE
 
@@ -22,43 +27,48 @@ slots:
 
 responses:
   utter_ask_name:
-  - text: "Gabby.mp3"
-  - text: "whats-your-name.mp3"
-  - text: "name.mp3"
+    - text: "my-name/gabby-1.mp3"
   utter_greet:
-  - text: "welcome.mp3"
+    - text: "intro/intro-2.mp3"
+    - text: "intro/intro-how-are-you.mp3"
+    - text: "intro/intro-3.mp3"
+  utter_where_did_you_get_number:
+    - text: "where-did-you-get-my-number/where-number.mp3"
   utter_age:
-  - text: "age.mp3"
-  utter_state_you_live_in:
-  - text: "state-you-live-in.mp3"
-  utter_transfer:
-  - text: "transfer.mp3"
-  utter_good_bye:
-  - text: "bye.mp3"
+    - text: "age/age-2.mp3"
+    - text: "age/age-3.mp3"
+    - text: "age/age-4.mp3"
+    - text: "age/ask-age.mp3"
+  utter_why_are_you_calling:
+    - text: "why-are-you-calling/no-cost.mp3"
+  utter_i_dont_want_to_change:
+    - text: "i-dont-want-to-change/i-dont-want-to-change.mp3"
   utter_how_are_you:
-  - text: "im-doing-great.mp3 "
-  utter_my_age:
-  - text: "my-age.mp3"
-  utter_complement:
-  - text: "thank-you.mp3"
-  utter_welcome:
-  - text: "you-welcome.mp3"
+    - text: "how-are-you/doing-good.mp3"
+  utter_type_of_medicare:
+    - text: "medicare-type/and-are-you-on-medicare-part-a-and-b.mp3"
+    - text: "medicare-type/medi-a-and-b.mp3"
+  utter_red_white_blue:
+    - text: "type-of-card/do-you-have-redwhiteblue-card.mp3"
+    - text: "type-of-card/re-white-blue.mp3"
   utter_fallback:
-  - text: "good-fallback-when-dont-understand.mp3"
-  - text: "when-ai-dont-understand-fallback.mp3"
-  - text: "when-cant-hear.mp3"
-  utter_life_insurance:
-  - text: "what-are-you-selling-again.mp3"
+    - text: "sorry-didnt-understand/sorry-didnt-understand.mp3"
   utter_out_of_scope:
-  - text: "im-sorry-out-of-scope.mp3"
-  - text: "out-of-scope.mp3"
-  - text: "out-of-scope-2.mp3"
-  utter_transfer_me_where:
-  - text: "transfer-me-where.mp3"
-
-actions:
-  - action_check_new_york
+    - text: "out-of-scope/out-of-scope-3.mp3"
+    - text: "out-of-scope/out-of-scope.mp3"
+    - text: "out-of-scope/out-of-scope-2.mp3"
+  utter_transfer:
+    - text: "transfer/finish-then-transfer.mp3"
+    - text: "tranfer/hold-while-transfer.mp3"
+    - text: "transfer/transfer-wait-for-a-sec.mp3"
+  utter_wait_time:
+    - text: "how-long-wait/how-long-is-it-going-to-take.mp3"
+  utter_how_long_to_transfer:
+    - text: "what-is-a-few-minutes/how-long-its-going-to-take.mp3"
+    - text: "what-is-a-few-minutes/5-to-10.mp3"
+  utter_i_dont_have_time:
+    - text: "i-dont-have-time/i-dont-have-time.mp3"
 
 session_config:
-  session_expiration_time: 60
+  session_expiration_time: 60 # value in minutes
   carry_over_slots_to_new_session: true
