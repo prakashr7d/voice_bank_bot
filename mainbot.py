@@ -1,11 +1,8 @@
 import requests
-from playsound import playsound
-
-from constants import DEFAULT_FILE_NAME
-from google_voice import GoogleRecognise
-from utils import record_audio
 from flask import Flask
 from flask import request, jsonify
+
+from google_voice import GoogleRecognise
 
 app = Flask(__name__)
 
