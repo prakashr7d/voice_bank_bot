@@ -36,7 +36,7 @@ async def mic_stream():
     # Be sure to use the correct parameters for the audio stream that matches
     # the audio formats described for the source language you'll be using:
     # https://docs.aws.amazon.com/transcribe/latest/dg/streaming.html
-    stream = sounddevice.RawInputStream(
+        stream = sounddevice.RawInputStream(
         channels=1,
         samplerate=16000,
         callback=callback,

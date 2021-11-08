@@ -1,0 +1,45 @@
+from typing import Text
+
+from google.cloud import speech
+import os
+import io
+
+
+class GoogleRecognise:
+    def __init__(self, default_file_name: Text):
+        os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'google_secret_key.json'
+        self.client = speech.SpeechClient()
+        self.file_name = default_file_name
+        self.config = speech.RecognitionConfig(
+            enable_automatic_punctuation=True,
+            audio_channel_count=1,
+            sample_rate_hertz=44100,
+            language_code="en-US"
+        )
+        self.response = None
+
+    def open_audio(self):
+        with io.open(self.file_name, "rb") as audio_file:
+            content = audio_file.read()
+            audio = speech.RecognitionAudio(content=content)
+        return audio
+
+    def recognise(self):
+        self.response = self.client.recognize(request={"config": self.config, "audio": self.open_audio()})
+
+    def get_response(self):
+        for result in self.response.results:
+            return result.alternatives[0].transcript
+
+# setting Google credential
+
+# create client instance
+
+
+# the path of your audio file
+
+
+# Sends the request to google to transcribe the audio
+
+# Reads the response
+
