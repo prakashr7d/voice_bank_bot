@@ -116,8 +116,8 @@ nlu:
     - hey dude
     - hey hey
     - hey let's talk
-    - hey rasa
-    - hey sara
+    - hey Emily
+    - hey Gabby
     - hey ther
     - hey there
     - hey there boy
@@ -139,7 +139,7 @@ nlu:
     - hi hi
     - hi i'm [Sandra Hernandez](name)
     - hi im [Amanda Anderson](name)
-    - hi mrs rasa
+    - hi mrs Gabrielle
     - hi pal!
     - hi sara
     - hi there
@@ -454,85 +454,7 @@ nlu:
     - and your name is?
     - May I know your name?
     - What do people call you?
-    - Do you have a name for yourself?
-- intent: say_state
-  examples: |
-    - I am in New work
-    - i am in Montana
-    - alaska
-    - texas
-    - virginia
-    - Alabama
-    - Alaska
-    - Arizona
-    - Arkansas
-    - California
-    - Colorado
-    - Connecticut
-    - Delaware
-    - Florida
-    - Georgia
-    - Hawaii
-    - Idaho
-    - IllinoisIndiana
-    - Iowa
-    - Kansas
-    - Kentucky
-    - Louisiana
-    - Maine
-    - Maryland
-    - Massachusetts
-    - Michigan
-    - Minnesota
-    - Mississippi
-    - Missouri
-    - MontanaNebraska
-    - Nevada
-    - New Hampshire
-    - New Jersey
-    - New Mexico
-    - New York
-    - North Carolina
-    - North Dakota
-    - Ohio
-    - Oklahoma
-    - Oregon
-    - PennsylvaniaRhode Island
-    - South Carolina
-    - South Dakota
-    - Tennessee
-    - Texas
-    - Utah
-    - Vermont
-    - Virginia
-    - Washington
-    - West Virginia
-    - Wisconsin
-    - Wyoming
-    - i live in Florida
-    - i'm in Nebraska
-    - i'm currently in New Jersey
-    - North Carolina
-    - South Carolina
-    - California
-    - i'm in Delaware
-    - born and raise in Louisiana
-    - Georgia
-    - Idaho
-    - Chicago
-    - Washington
-    - i live in the great state of Delaware
-    - I live in the Big apple
-    - Idaho
-    - we're up in Virginia
-    - i'm in cali
-    - i live in Cali
-    - so Cal
-    - so Flo
-    - the twin state
-    - state
-    - the music state
-    - flawda
+    - Do you have a name for yourself
 - intent: how_are_you
   examples: |
     - Ahoy matey how are you?
@@ -553,43 +475,58 @@ nlu:
     - How are you men?
     - How are you today?
     - How are you?
-- intent: my_age
+- intent: age
   examples: |
-    - Do you have friends the same age as you, if so, how old are they?
-    - How long have you been alive?
-    - How long have you been around?
-    - How long have you occupied the earth?
-    - How many candles were on your last birthday cake?
-    - How many years have you been alive?
-    - How many years have you lived?
-    - How old are you?
-    - How old were you on your last birthday?
-    - How old will you be on your next birthday?
-    - Tell me your day, month and year of birth.
-    - What is your age?
-    - What is your birthdate?
-    - What is your count of years being alive so far?
-    - What was your age on your last birthday?
-    - What will be your age on your next birthday?
-- intent: complement
-  examples: |
-    - you have a sweet voice
-    - you sound nice
-    - you have such a beautiful voice
-    - your voice is cute
-    - you sound cute
-    - what a lovely voice you have
-    - you sound just like my daughter
-    - you sound just like my grand daughter
-    - cute voice
-    - I bet you are cute
-    - sounds like you're a beautiful girl
-    - Gabby, that's a cute name
-    - your name is beautiful
-    - you have a nice voice
-    - you have a wonderful voice
-    - your voice is beautiful
-    - you sound amazing
+    - i'm 64 and half
+    - i'm 65
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - sixty nine
+    - sixty five
+    - seventy
+    - i am sixty four and half
+    - i am sixty eight
+    - i will be sixty five in a couple of month
+    - i just turned 64
+    - i'm sixty
+    - SURE
+    - Sure
+    - Sweet
+    - That would be great
+    - YES
+    - YUP
+    - Yepp
+    - Yes
+    - Yes I do
+    - Yes please
+    - Yes please!
+    - i am 28 next month
+    - i am 15
+    - 20
+    - 28
+    - 30
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 77
+    - twenty
+    - 72
 - intent: thankyou
   examples: |
     - Cool. Thanks
@@ -614,47 +551,117 @@ nlu:
     - merci
     - tanks
     - solid thanks
-- intent: good_bye
+- intent: where_did_you_get_number
   examples: |
-    - good afternoon
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - alright bye
-    - ight by
-    - ba
-    - later
-    - latr
-    - au revoir
-    - see u
-    - imma go now
-    - im hanging up now
-    - hanging up
-    - i'm going now
-    - bye bye
-    - bah bah
-    - bye now
-- intent: what_are_you_selling
+    - How did you get my number?
+    - how did you get my number
+    - where did you get my number
+    - how did you find my number
+    - how are you calling my phone
+    - where did you find my phone number
+    - my phone number
+- intent: red_white_blue
   examples: |
-    - what are you selling
-    - what is this call about
-    - What is the product
-    - what is it bout
-    - why is this call
-    - what is this? an ad
-    - why are you calling me so early
-    - why are you calling me so late
-    - what's this about
-    - whats this about
-    - about
-    - what kind
+    - yes
+    - yes i do
+    - i have both
+    - i have the red white and blue card
+    - yup
+    - yeah, i got it
+    - yes, i have that card
+    - that card, yes
+    - i do
+    - i think so
+    - i believe i do
+    - of course
+    - i've had it for years
+    - i have it for 2 years
+- intent: type_of_medicare
+  examples: |
+    - yes i am on medicare
+    - i have medicare
+    - yes i have both A and B
+    - yes A and B
+    - hmmm A and B
+    - yeah i have both A and B
+    - yes
+    - yup
+    - ya
+    - yeah
+    - yes
+    - yup yup
+    - i do
+    - yeah yeah
+    - hmm yes
+    - yeah yes ye
+    - i got it
+    - i have it
+    - medicare yes
+    - A and B yes
+    - A B yes
+    - yes i have both card
+    - I don't think so
+    - I don't know
+    - i am not sure
+    - No
+    - yes.
+    - yesh
+    - yess
+    - yessoo
+    - yesss
+    - yesssss
+    - yesyestyes
+    - yesyesyes
+    - yez
+- intent: why_are_you_calling
+  examples: |
+     - why are you calling me
+     - why do you keep calling here
+     - you need to stop calling me
+     - please let me know what this is about
+- intent: i_dont_want_to_change
+  examples: |
+     - i don't think i want to change my plan
+     - i don't want to change my current plan
+     - i'm not sure i want to change
+     - i think i'm fine with this plan
+     - am okay with this plan
+     - i like the one i have now
+     - i don't want to change
+     - i don't want to loose my benefits
+     - i don't think i want to change
+     - hmmmm, i am not sure
+- intent: i_dont_have_time
+  examples: |
+     - i can't talk right now
+     - am busy
+     - cant talk at the moment
+     - call me back later
+     - could you call me back later
+     - please call back
+     - is this going to take a long, i don't have time
+     - i cannot talk right now
+- intent: wait_time
+  examples: |
+     - how long is this going to take
+     - is this going to take a long time
+     - i don't have much time right now.
+     - how long do i have to wait on the line for
+     - will it take a lot time
+     - what's the timeframe
+     - what is the wait time
+     - how long do i have to wait on the phone for
+     - i hope i don't have to wait long
+- intent: how_long_to_transfer
+  examples: |
+     - i hope it's not long
+     - how long is this going to take
+     - is this going to take a long time
+     - i don't have much time right now.
+     - how long do i have to wait on the line for
+     - will it take a lot time
+     - what's the timeframe
+     - what is the wait time
 - intent: out_of_scope
   examples: |
     - what technology is this made of?
@@ -691,21 +698,17 @@ nlu:
     - is rasa a studio?
     - is rasa any good
     - is that any of your business
-- intent: transfer_me_where
+- intent: transfer
   examples: |
-    - where are you transfering me
-    - what agent are you transfering me
-    - which agent
-    - agent name
-    - who am i going to talk
-    - where are you transferring me
-    - I thought you were the agent
+    - okay
+    - okay, cool
+    - you can transfer me
+    - sure
+    - no problem
+    - ok, transfer me
     - why do you have to transfer me
     - but i like talking to you
     - why
-    - i don't want to talk to other people though
-    - how long will that take
-    - how long
 
 #- intent:
 #  examples:

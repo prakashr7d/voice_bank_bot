@@ -12,62 +12,69 @@ rules:
   - action: utter_greet
   - action: utter_age
 
-- rule: affirm to age
+- rule: why_are_you_calling
   steps:
-  - intent: affirm
-  - action: utter_state_you_live_in
+  - intent: why_are_you_calling
+  - action: utter_age
+  - action: utter_type_of_medicare
 
-- rule: transfer
+- rule: i_dont_want_to_change
   steps:
-  - intent: say_state
-  - action: action_check_new_york
+  - intent: i_dont_want_to_change
+  - action: utter_red_white_blue
 
 - rule: ask_name
   steps:
   - intent: ask_name
   - action: utter_ask_name
 
-- rule: bye
-  steps:
-  - intent: good_bye
-  - action: utter_good_bye
-
 - rule: how_are_you
   steps:
   - intent: how_are_you
-  - action: utter_how_are_you
+  - action: utter_age
 
-- rule: utter_my_age
+- rule: age
   steps:
-  - intent: my_age
-  - action: utter_my_age
+  - intent: age
+  - action: utter_type_of_medicare
 
-- rule: complement
+- rule: red_white_blue
   steps:
-  - intent: complement
-  - action: utter_complement
+  - intent: red_white_blue
+  - action: utter_transfer
 
-- rule: thankyou
+- rule: type_of_medicare
   steps:
-  - intent: thankyou
-  - action: utter_welcome
+  - intent: type_of_medicare
+  - action: utter_red_white_blue
+
+- rule: how_long_to_transfer
+  steps:
+  - intent: how_long_to_transfer
+  - action: utter_wait_time
+  - action: utter_transfer
+
+- rule: i_dont_have_time
+  steps:
+  - intent: i_dont_have_time
+  - action: utter_transfer
+
+- rule: wait_time
+  steps:
+  - intent: wait_time
+  - action: utter_transfer
 
 - rule: nlu_fallback
   steps:
   - intent: nlu_fallback
   - action: utter_fallback
 
-- rule: what are you selling
-  steps:
-  - intent: what_are_you_selling
-  - action: utter_life_insurance
-
 - rule: out of scope
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
 
-- rule: transfer-me-where
+- rule: transfer
   steps:
-    - intent: transfer_me_where
-    - action: utter_transfer_me_where
+    - intent: transfer
+    - action: utter_transfer

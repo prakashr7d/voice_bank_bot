@@ -1,18 +1,27 @@
 import requests
-from playsound import playsound
+from flask import Flask
+from flask import request, jsonify
 
-from constants import DEFAULT_FILE_NAME
 from google_voice import GoogleRecognise
-from utils import record_audio
 
-while True:
-    record_audio(DEFAULT_FILE_NAME)
-    recognise = GoogleRecognise(DEFAULT_FILE_NAME)
+app = Flask(__name__)
+
+
+@app.route('/rasa', methods=['POST'])
+def run_rasa():
+    uri = request.json['g_uri']
+    sender = request.json['sender_id']
+    recognise = GoogleRecognise(uri)
     recognise.recognise()
-    text = recognise.response()
-    response = requests.post(url="http://localhost:2001/webhooks/callback/webhook",
-                             json={"sender": "me", "message": text})
-    print(response.json())
+    text = recognise.get_response()
+    print(text)
+    response = requests.post(url="http://localhost:5005/webhooks/rest/webhook",
+                             jsshson={"sender": sender, "message": text})
+    return jsonify(response.json())
 
 
-
+# main driver function
+if __name__ == '__main__':
+    # run() method of Flask class runs the application
+    # on the local development server.
+    app.run(port=2001, host="0.0.0.0")

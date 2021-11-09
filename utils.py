@@ -11,5 +11,6 @@ def record_audio(default_file_name: Text):
     sd.default.samplerate = fs
     sd.default.channels = 1
     myrecording = sd.rec(duration * fs)
+    print("speak..")
     sd.wait()
     sf.write(default_file_name, myrecording, samplerate=fs, format="wav")
