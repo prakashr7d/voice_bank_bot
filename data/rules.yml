@@ -26,6 +26,7 @@ rules:
   steps:
   - intent: how_are_you
   - action: utter_how_are_you
+  - action: utter_age
 
 - rule: how_long_to_transfer
   steps:

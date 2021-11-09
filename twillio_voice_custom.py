@@ -17,6 +17,8 @@ from rasa.core.channels.channel import (
     UserMessage,
 )
 
+from constants import REDIRECT_NUMBER
+
 logger = logging.Logger(__name__)
 class TwilioVoiceInput(InputChannel):
     """Input channel for Twilio Voice."""
@@ -297,7 +299,7 @@ class TwilioVoiceInput(InputChannel):
             if i + 1 == len(messages):
                 if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                     voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                    dial = Dial("+12722250973")
+                    dial = Dial(REDIRECT_NUMBER)
                     voice_response.append(dial)
                     logger.error("got here")
                 else:
@@ -307,7 +309,7 @@ class TwilioVoiceInput(InputChannel):
             else:
                 if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                     voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                    dial = Dial("+12722250973")
+                    dial = Dial(REDIRECT_NUMBER)
                     voice_response.append(dial)
                     logger.error("got here")
                 else:
