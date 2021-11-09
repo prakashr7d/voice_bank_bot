@@ -2,7 +2,6 @@ version: "2.0"
 
 intents:
   - greet
-  - affirm
   - ask_name
   - how_are_you
   - where_did_you_get_number

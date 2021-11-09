@@ -172,7 +172,36 @@ nlu:
     - yoo
     - ssup?
     - helleo
-- intent: affirm
+
+- intent: ask_name
+  examples: |
+    - What is your name?
+    - what's your names
+    - and your name is?
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself
+- intent: how_are_you
+  examples: |
+    - Ahoy matey how are you?
+    - Are you ok?
+    - How's it going?
+    - how's it going
+    - what's going on
+    - what's cooking
+    - whaddup
+    - How you living
+    - Do you feel good?
+    - Do you have a great day?
+    - HI Sara, what are you up to?
+    - Hi Sara! How are you?
+    - How are You?
+    - How are things?
+    - How are you
+    - How are you men?
+    - How are you today?
+    - How are you?
+- intent: age
   examples: |
     - SURE
     - Sure
@@ -447,36 +476,6 @@ nlu:
     - cool beans
     - sounds good!
     - really
-- intent: ask_name
-  examples: |
-    - What is your name?
-    - what's your names
-    - and your name is?
-    - May I know your name?
-    - What do people call you?
-    - Do you have a name for yourself
-- intent: how_are_you
-  examples: |
-    - Ahoy matey how are you?
-    - Are you ok?
-    - How's it going?
-    - how's it going
-    - what's going on
-    - what's cooking
-    - whaddup
-    - How you living
-    - Do you feel good?
-    - Do you have a great day?
-    - HI Sara, what are you up to?
-    - Hi Sara! How are you?
-    - How are You?
-    - How are things?
-    - How are you
-    - How are you men?
-    - How are you today?
-    - How are you?
-- intent: age
-  examples: |
     - i'm 64 and half
     - i'm 65
     - 65
