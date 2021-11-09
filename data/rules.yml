@@ -6,12 +6,6 @@ rules:
   - intent: ask_name
   - action: utter_ask_name
 
-- rule: greet
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - action: utter_age
-
 - rule: why_are_you_calling
   steps:
   - intent: why_are_you_calling
@@ -31,22 +25,7 @@ rules:
 - rule: how_are_you
   steps:
   - intent: how_are_you
-  - action: utter_age
-
-- rule: age
-  steps:
-  - intent: age
-  - action: utter_type_of_medicare
-
-- rule: red_white_blue
-  steps:
-  - intent: red_white_blue
-  - action: utter_transfer
-
-- rule: type_of_medicare
-  steps:
-  - intent: type_of_medicare
-  - action: utter_red_white_blue
+  - action: utter_how_are_you
 
 - rule: how_long_to_transfer
   steps:

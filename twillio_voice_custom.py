@@ -295,7 +295,7 @@ class TwilioVoiceInput(InputChannel):
         for i, message in enumerate(messages):
             msg_text = message["text"]
             if i + 1 == len(messages):
-                if msg_text == "transfer.mp3":
+                if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                     voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     dial = Dial("+12722250973")
                     voice_response.append(dial)
@@ -305,7 +305,7 @@ class TwilioVoiceInput(InputChannel):
                     voice_response.append(gather)
 
             else:
-                if msg_text == "transfer.mp3":
+                if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                     voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     dial = Dial("+12722250973")
                     voice_response.append(dial)

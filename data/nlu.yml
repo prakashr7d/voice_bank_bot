@@ -1,713 +1,709 @@
 version: "2.0"
 
 nlu:
-- intent: greet
-  examples: |
-    - Hello!
-    - Hey
-    - Hello, how's it going
-    - heyyy
-    - hallo
-    - Hey, how are you
-    - howdy
-    - Hey Sara
-    - Hey bot
-    - Heya
-    - Heylo
-    - Hi
-    - Hi there
-    - Hi!
-    - Hi'
-    - Whats up my bot
-    - Whats up?
-    - ayyyy whaddup
-    - heyo
-    - hhola
-    - hi
-    - hi !
-    - Bom dia
-    - Bonjour
-    - Good Morning
-    - Good morning
-    - Good mourning
-    - Guten Morgen
-    - HELLO
-    - HEY
-    - HEllo
-    - HI
-    - HI Sara
-    - Hallo
-    - Hei
-    - Hellllooooooo
-    - Hello
-    - Hello Bot
-    - Hello Rasa
-    - Hello Sara
-    - Hello sara
-    - Hello!
-    - Hey
-    - Hey Sara
-    - Hey bot
-    - Heya
-    - Heylo
-    - Hi
-    - Hi Sara
-    - Hi Sara!
-    - Hi bot
-    - Hi man
-    - Hi rasa
-    - Hi sara
-    - Hi sara..
-    - Hi there
-    - Hi!
-    - Hi'
-    - Hi,
-    - Hi, bot
-    - Hieee
-    - Hieeeeeeeeeeeee
-    - Hola
-    - I said, helllllloooooO!!!!
-    - Well hello there ;)
-    - What is up?
-    - Whats up
-    - Whats up my bot
-    - Whats up?
-    - ayyyy whaddup
-    - bonjour
-    - ey boss
-    - good evening
-    - good moring
-    - good morning
-    - greet
-    - greetings
-    - hai
-    - hallo
-    - hallo sara
-    - halloo
-    - halloooo
-    - halo
-    - halo sara
-    - heeey
-    - heelio
-    - hell9o
-    - hellio
-    - hello
-    - hello Sara
-    - hello everybody
-    - hello friend
-    - hello hi
-    - hello is anybody there
-    - hello it is me again
-    - hello robot
-    - hello sara
-    - hello sweatheart
-    - hello sweet boy
-    - hello there
-    - hello world
-    - hello, my name is [Charles Pfeffer](name)
-    - hello?
-    - hello]
-    - hellooo
-    - helloooo
-    - helo
-    - hey
-    - hey bot
-    - hey bot!
-    - hey dude
-    - hey hey
-    - hey let's talk
-    - hey Emily
-    - hey Gabby
-    - hey ther
-    - hey there
-    - hey there boy
-    - hey there..
-    - hey, let's talk
-    - hey, sara!
-    - heya
-    - heyho
-    - heyo
-    - hhola
-    - hi
-    - hi !
-    - hi Mister
-    - hi again
-    - hi can you speak ?
-    - hi folks
-    - hi friend
-    - hi friends
-    - hi hi
-    - hi i'm [Sandra Hernandez](name)
-    - hi im [Amanda Anderson](name)
-    - hi mrs Gabrielle
-    - hi pal!
-    - hi sara
-    - hi there
-    - hi there it's me
-    - hi!
-    - hi.........................................................
-    - hi?
-    - hieee
-    - hii
-    - hiihihi
-    - hiii
-    - hlo
-    - hola
-    - howdy
-    - i am [Karen Mease](name)
-    - jojojo
-    - jop
-    - konichiwa
-    - merhaba
-    - ola sara
-    - rasa hello
-    - salut
-    - sup
-    - wasssup
-    - wasssup!
-    - what up
-    - whats popping
-    - whats up
-    - yo
-    - yoo
-    - ssup?
-    - helleo
+  - intent: greet
+    examples: |
+      - Hello!
+      - Hey
+      - Hello, how's it going
+      - heyyy
+      - hallo
+      - howdy
+      - Hey Sara
+      - Hey bot
+      - Heya
+      - Heylo
+      - Hi
+      - Hi there
+      - Hi!
+      - Hi'
+      - Whats up my bot
+      - Whats up?
+      - ayyyy whaddup
+      - heyo
+      - hhola
+      - hi
+      - hi !
+      - Bom dia
+      - Bonjour
+      - Good Morning
+      - Good morning
+      - Good mourning
+      - Guten Morgen
+      - HELLO
+      - HEY
+      - HEllo
+      - HI
+      - HI Sara
+      - Hallo
+      - Hei
+      - Hellllooooooo
+      - Hello
+      - Hello Bot
+      - Hello Rasa
+      - Hello Sara
+      - Hello sara
+      - Hello!
+      - Hey
+      - Hey Sara
+      - Hey bot
+      - Heya
+      - Heylo
+      - Hi
+      - Hi Sara
+      - Hi Sara!
+      - Hi bot
+      - Hi man
+      - Hi rasa
+      - Hi sara
+      - Hi sara..
+      - Hi there
+      - Hi!
+      - Hi'
+      - Hi,
+      - Hi, bot
+      - Hieee
+      - Hieeeeeeeeeeeee
+      - Hola
+      - I said, helllllloooooO!!!!
+      - Well hello there ;)
+      - What is up?
+      - Whats up
+      - Whats up my bot
+      - Whats up?
+      - ayyyy whaddup
+      - bonjour
+      - ey boss
+      - good evening
+      - good moring
+      - good morning
+      - greet
+      - greetings
+      - hai
+      - hallo
+      - hallo sara
+      - halloo
+      - halloooo
+      - halo
+      - halo sara
+      - heeey
+      - heelio
+      - hell9o
+      - hellio
+      - hello
+      - hello Sara
+      - hello everybody
+      - hello friend
+      - hello hi
+      - hello is anybody there
+      - hello it is me again
+      - hello robot
+      - hello sara
+      - hello sweatheart
+      - hello sweet boy
+      - hello there
+      - hello world
+      - hello, my name is [Charles Pfeffer](name)
+      - hello?
+      - hello]
+      - hellooo
+      - helloooo
+      - helo
+      - hey
+      - hey bot
+      - hey bot!
+      - hey dude
+      - hey hey
+      - hey let's talk
+      - hey Emily
+      - hey Gabby
+      - hey ther
+      - hey there
+      - hey there boy
+      - hey there..
+      - hey, let's talk
+      - hey, sara!
+      - heya
+      - heyho
+      - heyo
+      - hhola
+      - hi
+      - hi !
+      - hi Mister
+      - hi again
+      - hi can you speak ?
+      - hi folks
+      - hi friend
+      - hi friends
+      - hi hi
+      - hi i'm [Sandra Hernandez](name)
+      - hi im [Amanda Anderson](name)
+      - hi mrs Gabrielle
+      - hi pal!
+      - hi sara
+      - hi there
+      - hi there it's me
+      - hi!
+      - hi.........................................................
+      - hi?
+      - hieee
+      - hii
+      - hiihihi
+      - hiii
+      - hlo
+      - hola
+      - howdy
+      - i am [Karen Mease](name)
+      - jojojo
+      - jop
+      - konichiwa
+      - merhaba
+      - ola sara
+      - rasa hello
+      - salut
+      - sup
+      - wasssup
+      - wasssup!
+      - what up
+      - whats popping
+      - whats up
+      - yo
+      - yoo
+      - ssup?
+      - helleo
 
-- intent: ask_name
-  examples: |
-    - What is your name?
-    - what's your names
-    - and your name is?
-    - May I know your name?
-    - What do people call you?
-    - Do you have a name for yourself
-- intent: how_are_you
-  examples: |
-    - Ahoy matey how are you?
-    - Are you ok?
-    - How's it going?
-    - how's it going
-    - what's going on
-    - what's cooking
-    - whaddup
-    - How you living
-    - Do you feel good?
-    - Do you have a great day?
-    - HI Sara, what are you up to?
-    - Hi Sara! How are you?
-    - How are You?
-    - How are things?
-    - How are you
-    - How are you men?
-    - How are you today?
-    - How are you?
-- intent: age
-  examples: |
-    - SURE
-    - Sure
-    - Sweet
-    - That would be great
-    - YES
-    - YUP
-    - Yepp
-    - Yes
-    - Yes I do
-    - Yes please
-    - Yes please!
-    - i am 28 next month
-    - i am 15
-    - 20
-    - 28
-    - 30
-    - 50
-    - 51
-    - 52
-    - 53
-    - 54
-    - 55
-    - 56
-    - 57
-    - 58
-    - 59
-    - 60
-    - 61
-    - 62
-    - 63
-    - 64
-    - 65
-    - 77
-    - twenty
-    - 72
-    - seventeen
-    - fifty six
-    - I am good enough ag
-    - i'm old
-    - am old
-    - i'm too old
-    - Yes, I accept
-    - Yes.
-    - Yup
-    - yay
-    - ye
-    - ye splease
-    - yea
-    - really
-    - Accept
-    - Awesome!
-    - Good
-    - Great
-    - I accept
-    - I accept.
-    - I agree
-    - I am using it
-    - I changed my mind. I want to accept it
-    - I do
-    - I get it
-    - I guess so
-    - I have used it in the past
-    - I will
-    - I'd absolutely love that
-    - I'm sure I will!
-    - I'm using it
-    - Nice
-    - OK
-    - Ofcourse
-    - Oh yes
-    - Oh, ok
-    - Ok
-    - Ok let's start
-    - Ok.
-    - Okay
-    - Okay!
-    - PLEASE
-    - SURE
-    - Sure
-    - Sweet
-    - That would be great
-    - YES
-    - YUP
-    - Yea
-    - Yeah
-    - Yeah sure
-    - Yep
-    - Yep that's fine
-    - Yep!
-    - Yepp
-    - Yes
-    - Yes I do
-    - Yes please
-    - Yes please!
-    - Yes, I accept
-    - Yes.
-    - Yup
-    - a little
-    - absolutely
-    - accept
-    - accepted
-    - agreed
-    - ah ok
-    - alright
-    - alright, cool
-    - amayzing
-    - amazing!
-    - awesome
-    - awesome!
-    - confirm
-    - cool story bro
-    - definitely yes without a doubt
-    - done
-    - fair enough
-    - fcourse
-    - fine
-    - fuck yeah!
-    - go
-    - go ahead
-    - go for it
-    - going super well
-    - good.
-    - great
-    - great lets do that
-    - great!
-    - hell yeah
-    - hell yes
-    - hm, i'd like that
-    - how nice!
-    - i accept
-    - i agree
-    - i am!
-    - i want that
-    - i will!
-    - it is ok
-    - its okay
-    - ja
-    - ja cool
-    - ja thats great
-    - jezz
-    - jo
-    - k
-    - kk
-    - lets do it
-    - lets do this
-    - not bad
-    - of course
-    - ofcoure i do
-    - ofcourse
-    - oh awesome!
-    - oh cool
-    - oh good !!
-    - oh super
-    - ok
-    - ok cool
-    - ok fine
-    - ok friend
-    - ok good
-    - ok great
-    - ok i accept
-    - ok sara
-    - ok, I behave now
-    - ok, I understood
-    - ok, Sara
-    - ok...
-    - okay
-    - okay cool
-    - okay sure
-    - okay..
-    - oki doki
-    - okie
-    - ook
-    - oui
-    - perfect
-    - please
-    - si
-    - sort of
-    - sure
-    - sure thing
-    - sure!
-    - that is cool
-    - that ok
-    - that sounds fine
-    - that's great
-    - thats fine
-    - thats good
-    - thats great
-    - top
-    - uh-huh
-    - very much
-    - well yes
-    - ya
-    - ya cool
-    - ya go for it
-    - ya i want
-    - ya please
-    - ya thats cool
-    - yaah
-    - yap
-    - yaps
-    - yas
-    - yay
-    - ye
-    - ye splease
-    - yea
-    - yeah
-    - yeah do that
-    - yeah sure
-    - yeah'=
-    - yeah, why not
-    - yeeeeezzzzz
-    - yeeees
-    - yep
-    - yep i want that
-    - yep if i have to
-    - yep please
-    - yep that's nice
-    - yep thats cool
-    - yep, will do thank you
-    - yep. :/
-    - yes
-    - yes ...
-    - yes I do
-    - yes accept please
-    - yes baby
-    - yes cool
-    - yes give me information
-    - yes go ahead
-    - yes go for it
-    - yes great
-    - yes i accept
-    - yes i agree
-    - yes i have built a bot before
-    - yes i have!
-    - yes it is
-    - yes it was okay
-    - yes of course
-    - yes pleae
-    - yes please
-    - yes please!
-    - yes pls
-    - yes sirfr
-    - yes that's great
-    - yes that's what i want
-    - yes you can
-    - yes'
-    - yes, I'd love to
-    - yes, cool
-    - yes, give me information, please
-    - yes,i am
-    - yes.
-    - yesh
-    - yess
-    - yessoo
-    - yesss
-    - yesssss
-    - yesyestyes
-    - yesyesyes
-    - yez
-    - yop
-    - you asked me a yes or no question, which i answered with yes
-    - you got me, I accept, if you want me to
-    - yres
-    - ys
-    - yup
-    - yyeeeh
-    - Okay cool
-    - ok..
-    - considering
-    - More a less
-    - cool beans
-    - sounds good!
-    - really
-    - i'm 64 and half
-    - i'm 65
-    - 65
-    - 66
-    - 67
-    - 68
-    - 69
-    - sixty nine
-    - sixty five
-    - seventy
-    - i am sixty four and half
-    - i am sixty eight
-    - i will be sixty five in a couple of month
-    - i just turned 64
-    - i'm sixty
-    - SURE
-    - Sure
-    - Sweet
-    - That would be great
-    - YES
-    - YUP
-    - Yepp
-    - Yes
-    - Yes I do
-    - Yes please
-    - Yes please!
-    - i am 28 next month
-    - i am 15
-    - 20
-    - 28
-    - 30
-    - 50
-    - 51
-    - 52
-    - 53
-    - 54
-    - 55
-    - 56
-    - 57
-    - 58
-    - 59
-    - 60
-    - 61
-    - 62
-    - 63
-    - 64
-    - 65
-    - 77
-    - twenty
-    - 72
-- intent: thankyou
-  examples: |
-    - Cool. Thanks
-    - Great, thanks
-    - Thank you
-    - Thank you Sara
-    - Thank you so much
-    - Thank's!
-    - Thanks
-    - Thanks bot
-    - Thanks for thatthat
-    - Thanks!
-    - amazing, thanks
-    - cheers
-    - cheers bro
-    - cool thank you
-    - cool thanks
-    - cool, thanks
-    - danke
-    - great thanks
-    - ok thanks
-    - merci
-    - tanks
-    - solid thanks
-- intent: where_did_you_get_number
-  examples: |
-    - How did you get my number?
-    - how did you get my number
-    - where did you get my number
-    - how did you find my number
-    - how are you calling my phone
-    - where did you find my phone number
-    - my phone number
-- intent: red_white_blue
-  examples: |
-    - yes
-    - yes i do
-    - i have both
-    - i have the red white and blue card
-    - yup
-    - yeah, i got it
-    - yes, i have that card
-    - that card, yes
-    - i do
-    - i think so
-    - i believe i do
-    - of course
-    - i've had it for years
-    - i have it for 2 years
-- intent: type_of_medicare
-  examples: |
-    - yes i am on medicare
-    - i have medicare
-    - yes i have both A and B
-    - yes A and B
-    - hmmm A and B
-    - yeah i have both A and B
-    - yes
-    - yup
-    - ya
-    - yeah
-    - yes
-    - yup yup
-    - i do
-    - yeah yeah
-    - hmm yes
-    - yeah yes ye
-    - i got it
-    - i have it
-    - medicare yes
-    - A and B yes
-    - A B yes
-    - yes i have both card
-    - I don't think so
-    - I don't know
-    - i am not sure
-    - No
-    - yes.
-    - yesh
-    - yess
-    - yessoo
-    - yesss
-    - yesssss
-    - yesyestyes
-    - yesyesyes
-    - yez
-- intent: why_are_you_calling
-  examples: |
-     - why are you calling me
-     - why do you keep calling here
-     - you need to stop calling me
-     - please let me know what this is about
-- intent: i_dont_want_to_change
-  examples: |
-     - i don't think i want to change my plan
-     - i don't want to change my current plan
-     - i'm not sure i want to change
-     - i think i'm fine with this plan
-     - am okay with this plan
-     - i like the one i have now
-     - i don't want to change
-     - i don't want to loose my benefits
-     - i don't think i want to change
-     - hmmmm, i am not sure
-- intent: i_dont_have_time
-  examples: |
-     - i can't talk right now
-     - am busy
-     - cant talk at the moment
-     - call me back later
-     - could you call me back later
-     - please call back
-     - is this going to take a long, i don't have time
-     - i cannot talk right now
-- intent: wait_time
-  examples: |
-     - how long is this going to take
-     - is this going to take a long time
-     - i don't have much time right now.
-     - how long do i have to wait on the line for
-     - will it take a lot time
-     - what's the timeframe
-     - what is the wait time
-     - how long do i have to wait on the phone for
-     - i hope i don't have to wait long
-- intent: how_long_to_transfer
-  examples: |
-     - i hope it's not long
-     - how long is this going to take
-     - is this going to take a long time
-     - i don't have much time right now.
-     - how long do i have to wait on the line for
-     - will it take a lot time
-     - what's the timeframe
-     - what is the wait time
-- intent: out_of_scope
-  examples: |
-    - what technology is this made of?
-    - i immediately need help with implementing the coolest bot you can imagine
-    - i m looking for job
-    - i told you already
-    - what are you going to do for me anyway
-    - you think you can call to my house and tell me what to do
-    - do you do drug
-    - i do have insurance but i want to get something for my  wife insurance, can i do that
-    - listen, don't think i don't know that you're annying as shit.
-    - i wanna party
-    - i want a non dripping ice cream
-    - i want caffe
-    - i want food
-    - i want good flycam
-    - i want more of you in my life!
-    - i want pizza
-    - i want pizza!!
-    - i want to book a hotel
-    - i want to buy a roomba for my grandson
-    - i want to eat
-    - i want to find new friends
-    - i want to find out what you can build with rasa
-    - i want to fly
-    - i want to grab lunch
-    - i want to know current situtation in pakistan
-    - i want to order a pizza
-    - i want to see your happy customers
-    - i will tame a mouse for you
-    - is [John Lewis](name) still married to you
-    - is it a wasteland full of broken robot parts?
-    - is it allow to
-    - is rasa a studio?
-    - is rasa any good
-    - is that any of your business
-- intent: transfer
-  examples: |
-    - okay
-    - okay, cool
-    - you can transfer me
-    - sure
-    - no problem
-    - ok, transfer me
-    - why do you have to transfer me
-    - but i like talking to you
-    - why
+  - intent: ask_name
+    examples: |
+      - What is your name?
+      - what's your names
+      - and your name is?
+      - May I know your name?
+      - What do people call you?
+      - Do you have a name for yourself
+  - intent: how_are_you
+    examples: |
+      - Ahoy matey how are you?
+      - Are you ok?
+      - How's it going?
+      - how's it going
+      - what's going on
+      - what's cooking
+      - whaddup
+      - How you living
+      - Do you feel good?
+      - Do you have a great day?
+      - HI Sara, what are you up to?
+      - Hi Sara! How are you?
+      - How are You?
+      - How are things?
+      - How are you
+      - How are you men?
+      - How are you today?
+      - How are you?
+
+  - intent: thankyou
+    examples: |
+      - Cool. Thanks
+      - Great, thanks
+      - Thank you
+      - Thank you Sara
+      - Thank you so much
+      - Thank's!
+      - Thanks
+      - Thanks bot
+      - Thanks for thatthat
+      - Thanks!
+      - amazing, thanks
+      - cheers
+      - cheers bro
+      - cool thank you
+      - cool thanks
+      - cool, thanks
+      - danke
+      - great thanks
+      - ok thanks
+      - merci
+      - tanks
+      - solid thanks
+  - intent: where_did_you_get_number
+    examples: |
+      - How did you get my number?
+      - how did you get my number
+      - where did you get my number
+      - how did you find my number
+      - how are you calling my phone
+      - where did you find my phone number
+      - my phone number
+  - intent: affirm
+    examples: |
+      - - yes
+      - yes i do
+      - i have both
+      - i have the red white and blue card
+      - yup
+      - yeah, i got it
+      - yes, i have that card
+      - that card, yes
+      - i do
+      - i think so
+      - i believe i do
+      - of course
+      - i've had it for years
+      - i have it for 2 years
+      - SURE
+      - Sure
+      - Sweet
+      - That would be great
+      - YES
+      - YUP
+      - Yepp
+      - Yes
+      - Yes I do
+      - Yes please
+      - Yes please!
+      - i am 28 next month
+      - i am 15
+      - 20
+      - 28
+      - 30
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+      - 61
+      - 62
+      - 63
+      - 64
+      - 65
+      - 77
+      - twenty
+      - 72
+      - seventeen
+      - fifty six
+      - I am good enough ag
+      - i'm old
+      - am old
+      - i'm too old
+      - Yes, I accept
+      - Yes.
+      - Yup
+      - yay
+      - ye
+      - ye splease
+      - yea
+      - really
+      - Accept
+      - Awesome!
+      - Good
+      - Great
+      - I accept
+      - I accept.
+      - I agree
+      - I am using it
+      - I changed my mind. I want to accept it
+      - I do
+      - I get it
+      - I guess so
+      - I have used it in the past
+      - I will
+      - I'd absolutely love that
+      - I'm sure I will!
+      - I'm using it
+      - Nice
+      - OK
+      - Ofcourse
+      - Oh yes
+      - Oh, ok
+      - Ok
+      - Ok let's start
+      - Ok.
+      - Okay
+      - Okay!
+      - PLEASE
+      - SURE
+      - Sure
+      - Sweet
+      - That would be great
+      - YES
+      - YUP
+      - Yea
+      - Yeah
+      - Yeah sure
+      - Yep
+      - Yep that's fine
+      - Yep!
+      - Yepp
+      - Yes
+      - Yes I do
+      - Yes please
+      - Yes please!
+      - Yes, I accept
+      - Yes.
+      - Yup
+      - a little
+      - absolutely
+      - accept
+      - accepted
+      - agreed
+      - ah ok
+      - alright
+      - alright, cool
+      - amayzing
+      - amazing!
+      - awesome
+      - awesome!
+      - confirm
+      - cool story bro
+      - definitely yes without a doubt
+      - done
+      - fair enough
+      - fcourse
+      - fine
+      - fuck yeah!
+      - go
+      - go ahead
+      - go for it
+      - going super well
+      - good.
+      - great
+      - great lets do that
+      - great!
+      - hell yeah
+      - hell yes
+      - hm, i'd like that
+      - how nice!
+      - i accept
+      - i agree
+      - i am!
+      - i want that
+      - i will!
+      - it is ok
+      - its okay
+      - ja
+      - ja cool
+      - ja thats great
+      - jezz
+      - jo
+      - k
+      - kk
+      - lets do it
+      - lets do this
+      - not bad
+      - of course
+      - ofcoure i do
+      - ofcourse
+      - oh awesome!
+      - oh cool
+      - oh good !!
+      - oh super
+      - ok
+      - ok cool
+      - ok fine
+      - ok friend
+      - ok good
+      - ok great
+      - ok i accept
+      - ok sara
+      - ok, I behave now
+      - ok, I understood
+      - ok, Sara
+      - ok...
+      - okay
+      - okay cool
+      - okay sure
+      - okay..
+      - oki doki
+      - okie
+      - ook
+      - oui
+      - perfect
+      - please
+      - si
+      - sort of
+      - sure
+      - sure thing
+      - sure!
+      - that is cool
+      - that ok
+      - that sounds fine
+      - that's great
+      - thats fine
+      - thats good
+      - thats great
+      - top
+      - uh-huh
+      - very much
+      - well yes
+      - ya
+      - ya cool
+      - ya go for it
+      - ya i want
+      - ya please
+      - ya thats cool
+      - yaah
+      - yap
+      - yaps
+      - yas
+      - yay
+      - ye
+      - ye splease
+      - yea
+      - yeah
+      - yeah do that
+      - yeah sure
+      - yeah'=
+      - yeah, why not
+      - yeeeeezzzzz
+      - yeeees
+      - yep
+      - yep i want that
+      - yep if i have to
+      - yep please
+      - yep that's nice
+      - yep thats cool
+      - yep, will do thank you
+      - yep. :/
+      - yes
+      - yes ...
+      - yes I do
+      - yes accept please
+      - yes baby
+      - yes cool
+      - yes give me information
+      - yes go ahead
+      - yes go for it
+      - yes great
+      - yes i accept
+      - yes i agree
+      - yes i have built a bot before
+      - yes i have!
+      - yes it is
+      - yes it was okay
+      - yes of course
+      - yes pleae
+      - yes please
+      - yes please!
+      - yes pls
+      - yes sirfr
+      - yes that's great
+      - yes that's what i want
+      - yes you can
+      - yes'
+      - yes, I'd love to
+      - yes, cool
+      - yes, give me information, please
+      - yes,i am
+      - yes.
+      - yesh
+      - yess
+      - yessoo
+      - yesss
+      - yesssss
+      - yesyestyes
+      - yesyesyes
+      - yez
+      - yop
+      - you asked me a yes or no question, which i answered with yes
+      - you got me, I accept, if you want me to
+      - yres
+      - ys
+      - yup
+      - yyeeeh
+      - Okay cool
+      - ok..
+      - considering
+      - More a less
+      - cool beans
+      - sounds good!
+      - really
+      - i'm 64 and half
+      - i'm 65
+      - 65
+      - 66
+      - 67
+      - 68
+      - 69
+      - sixty nine
+      - sixty five
+      - seventy
+      - i am sixty four and half
+      - i am sixty eight
+      - i will be sixty five in a couple of month
+      - i just turned 64
+      - i'm sixty
+      - SURE
+      - Sure
+      - Sweet
+      - That would be great
+      - YES
+      - YUP
+      - Yepp
+      - Yes
+      - Yes I do
+      - Yes please
+      - Yes please!
+      - i am 28 next month
+      - i am 15
+      - 20
+      - 28
+      - 30
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+      - 61
+      - 62
+      - 63
+      - 64
+      - 65
+      - 77
+      - twenty
+      - 72
+      - yes i am on medicare
+      - i have medicare
+      - yes i have both A and B
+      - yes A and B
+      - hmmm A and B
+      - yeah i have both A and B
+      - yes
+      - yup
+      - ya
+      - yeah
+      - yes
+      - yup yup
+      - i do
+      - yeah yeah
+      - hmm yes
+      - yeah yes ye
+      - i got it
+      - i have it
+      - medicare yes
+      - A and B yes
+      - A B yes
+      - yes i have both card
+      - I don't think so
+      - I don't know
+      - i am not sure
+      - No
+      - yes.
+      - yesh
+      - yess
+      - yessoo
+      - yesss
+      - yesssss
+      - yesyestyes
+      - yesyesyes
+      - yez
+  - intent: why_are_you_calling
+    examples: |
+      - why are you calling me
+      - why do you keep calling here
+      - you need to stop calling me
+      - please let me know what this is about
+  - intent: i_dont_want_to_change
+    examples: |
+      - i don't think i want to change my plan
+      - i don't want to change my current plan
+      - i'm not sure i want to change
+      - i think i'm fine with this plan
+      - am okay with this plan
+      - i like the one i have now
+      - i don't want to change
+      - i don't want to loose my benefits
+      - i don't think i want to change
+      - hmmmm, i am not sure
+  - intent: i_dont_have_time
+    examples: |
+      - i can't talk right now
+      - am busy
+      - cant talk at the moment
+      - call me back later
+      - could you call me back later
+      - please call back
+      - is this going to take a long, i don't have time
+      - i cannot talk right now
+  - intent: wait_time
+    examples: |
+      - how long is this going to take
+      - is this going to take a long time
+      - i don't have much time right now.
+      - how long do i have to wait on the line for
+      - will it take a lot time
+      - what's the timeframe
+      - what is the wait time
+      - how long do i have to wait on the phone for
+      - i hope i don't have to wait long
+  - intent: how_long_to_transfer
+    examples: |
+      - i hope it's not long
+      - how long is this going to take
+      - is this going to take a long time
+      - i don't have much time right now.
+      - how long do i have to wait on the line for
+      - will it take a lot time
+      - what's the timeframe
+      - what is the wait time
+  - intent: out_of_scope
+    examples: |
+      - what technology is this made of?
+      - i immediately need help with implementing the coolest bot you can imagine
+      - i m looking for job
+      - i told you already
+      - what are you going to do for me anyway
+      - you think you can call to my house and tell me what to do
+      - do you do drug
+      - i do have insurance but i want to get something for my  wife insurance, can i do that
+      - listen, don't think i don't know that you're annying as shit.
+      - i wanna party
+      - i want a non dripping ice cream
+      - i want caffe
+      - i want food
+      - i want good flycam
+      - i want more of you in my life!
+      - i want pizza
+      - i want pizza!!
+      - i want to book a hotel
+      - i want to buy a roomba for my grandson
+      - i want to eat
+      - i want to find new friends
+      - i want to find out what you can build with rasa
+      - i want to fly
+      - i want to grab lunch
+      - i want to know current situtation in pakistan
+      - i want to order a pizza
+      - i want to see your happy customers
+      - i will tame a mouse for you
+      - is [John Lewis](name) still married to you
+      - is it a wasteland full of broken robot parts?
+      - is it allow to
+      - is rasa a studio?
+      - is rasa any good
+      - is that any of your business
+  - intent: transfer
+    examples: |
+      - okay
+      - okay, cool
+      - you can transfer me
+      - sure
+      - no problem
+      - ok, transfer me
+      - why do you have to transfer me
+      - but i like talking to you
+      - why
 
 #- intent:
 #  examples:

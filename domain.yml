@@ -5,9 +5,7 @@ intents:
   - ask_name
   - how_are_you
   - where_did_you_get_number
-  - age
-  - type_of_medicare
-  - red_white_blue
+  - affirm
   - out_of_scope
   - transfer
   - wait_time
@@ -57,8 +55,6 @@ responses:
     - text: "out-of-scope/out-of-scope.mp3"
     - text: "out-of-scope/out-of-scope-2.mp3"
   utter_transfer:
-    - text: "transfer/finish-then-transfer.mp3"
-    - text: "tranfer/hold-while-transfer.mp3"
     - text: "transfer/transfer-wait-for-a-sec.mp3"
   utter_wait_time:
     - text: "how-long-wait/how-long-is-it-going-to-take.mp3"
