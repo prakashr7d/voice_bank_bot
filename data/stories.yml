@@ -8,8 +8,18 @@ stories:
   - action: utter_age
   - intent: affirm
   - action: utter_type_of_medicare
-  - intent: affirm
+  - intent: deny
   - action: utter_red_white_blue
+  - intent: affirm
+  - action: utter_transfer
+
+- story: type_of_medicare_deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: affirm
+  - action: utter_type_of_medicare
   - intent: affirm
   - action: utter_transfer
 
