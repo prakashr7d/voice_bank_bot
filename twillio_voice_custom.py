@@ -296,22 +296,22 @@ class TwilioVoiceInput(InputChannel):
             msg_text = message["text"]
             if i + 1 == len(messages):
                 if msg_text == "transfer.mp3":
-                    voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                    voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     dial = Dial("+12722250973")
                     voice_response.append(dial)
                     logger.error("got here")
                 else:
-                    gather.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                    gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     voice_response.append(gather)
 
             else:
                 if msg_text == "transfer.mp3":
-                    voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                    voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     dial = Dial("+12722250973")
                     voice_response.append(dial)
                     logger.error("got here")
                 else:
-                    voice_response.play(f"https://banking-bot-audio.s3.amazonaws.com/{msg_text}")
+                    voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     voice_response.pause(length=1)
             if message == "take-me-off.mp3":
                 voice_response.hangup()
