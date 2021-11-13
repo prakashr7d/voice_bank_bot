@@ -296,28 +296,28 @@ class TwilioVoiceInput(InputChannel):
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
             msg_text = message["text"]
-            if i + 1 == len(messages):
-                if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
-                    voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                    dial = Dial(REDIRECT_NUMBER)
-                    voice_response.append(dial)
-                    logger.error("got here")
-                else:
-                    gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                    voice_response.append(gather)
+            if not msg_text == "hungup":
+                if i + 1 == len(messages):
+                    if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
+                        voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                        dial = Dial(REDIRECT_NUMBER)
+                        voice_response.append(dial)
+                        logger.error("got here")
+                    else:
+                        gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                        voice_response.append(gather)
 
+                else:
+                    if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
+                        voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                        dial = Dial(REDIRECT_NUMBER)
+                        voice_response.append(dial)
+                        logger.error("got here")
+                    else:
+                        voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                        voice_response.pause(length=1)
             else:
-                if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
-                    voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                    dial = Dial(REDIRECT_NUMBER)
-                    voice_response.append(dial)
-                    logger.error("got here")
-                else:
-                    voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                    voice_response.pause(length=1)
-            if message == "take-me-off.mp3":
                 voice_response.hangup()
-
         return voice_response
 
 

@@ -171,6 +171,11 @@ nlu:
       - yoo
       - ssup?
       - helleo
+      - I don't understand can you start from first
+      - restart the conversation
+      - i missed the things that you have mentioned
+      - What did you told
+      - Can you start from
 
   - intent: ask_name
     examples: |
@@ -804,3 +809,13 @@ nlu:
       - stop it, i do not care!!!
       - none of them
       - I don't agree
+
+  - intent: hungup
+    examples: |
+      - please hungup the phone
+      - can you please cut the call
+      - I don't wanna talk to you
+      - you fucking idiot
+      - i was getting call 50 times a day please shut the fuck up and don't call me
+      - don't you understand i am saying don't call me again and again
+      - don't call me
