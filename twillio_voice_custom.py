@@ -20,6 +20,8 @@ from rasa.core.channels.channel import (
 from constants import REDIRECT_NUMBER
 
 logger = logging.Logger(__name__)
+
+
 class TwilioVoiceInput(InputChannel):
     """Input channel for Twilio Voice."""
 
@@ -117,13 +119,13 @@ class TwilioVoiceInput(InputChannel):
         )
 
     def __init__(
-        self,
-        initial_prompt: Optional[Text],
-        reprompt_fallback_phrase: Optional[Text],
-        assistant_voice: Optional[Text],
-        speech_timeout: Optional[Text],
-        speech_model: Optional[Text],
-        enhanced: Optional[Text],
+            self,
+            initial_prompt: Optional[Text],
+            reprompt_fallback_phrase: Optional[Text],
+            assistant_voice: Optional[Text],
+            speech_timeout: Optional[Text],
+            speech_model: Optional[Text],
+            enhanced: Optional[Text],
     ) -> None:
         """Creates a connection to Twilio voice.
 
@@ -162,12 +164,12 @@ class TwilioVoiceInput(InputChannel):
             self._raise_invalid_enhanced_option_exception()
 
         if (self.enhanced.lower() == "true") and (
-            self.speech_model.lower() != "phone_call"
+                self.speech_model.lower() != "phone_call"
         ):
             self._raise_invalid_enhanced_speech_model_exception()
 
         if (self.speech_model.lower() != "numbers_and_commands") and (
-            self.speech_timeout.lower() == "auto"
+                self.speech_timeout.lower() == "auto"
         ):
             self._raise_invalid_speech_model_timeout_exception()
 
@@ -219,7 +221,7 @@ class TwilioVoiceInput(InputChannel):
         )
 
     def blueprint(
-        self, on_new_message: Callable[[UserMessage], Awaitable[None]]
+            self, on_new_message: Callable[[UserMessage], Awaitable[None]]
     ) -> Blueprint:
         """Defines endpoints for Twilio voice channel."""
         twilio_voice_webhook = Blueprint("Twilio_voice_webhook", __name__)
@@ -230,11 +232,12 @@ class TwilioVoiceInput(InputChannel):
 
         @twilio_voice_webhook.route("/webhook", methods=["POST"])
         async def receive(request: Request) -> Text:
+
             sender_id = request.form.get("From")
             text = request.form.get("SpeechResult")
             input_channel = self.name()
             call_status = request.form.get("CallStatus")
-
+            logger.error(text)
             collector = TwilioVoiceCollectingOutputChannel()
 
             # Provide an initial greeting to answer the user's call.
@@ -279,7 +282,7 @@ class TwilioVoiceInput(InputChannel):
         return twilio_voice_webhook
 
     def _build_twilio_voice_response(
-        self, messages: List[Dict[Text, Any]]
+            self, messages: List[Dict[Text, Any]]
     ) -> VoiceResponse:
         """Builds the Twilio Voice Response object."""
         voice_response = VoiceResponse()
@@ -333,7 +336,7 @@ class TwilioVoiceCollectingOutputChannel(CollectingOutputChannel):
         return "twilio_voice"
 
     @staticmethod
-    def _emoji_warning(text: Text,) -> None:
+    def _emoji_warning(text: Text, ) -> None:
         """Raises a warning if text contains an emoji."""
         emoji_regex = rasa.utils.io.get_emoji_regex()
         if emoji_regex.findall(text):
@@ -343,7 +346,7 @@ class TwilioVoiceCollectingOutputChannel(CollectingOutputChannel):
             )
 
     async def send_text_message(
-        self, recipient_id: Text, text: Text, **kwargs: Any
+            self, recipient_id: Text, text: Text, **kwargs: Any
     ) -> None:
         """Sends the text message after removing emojis."""
         self._emoji_warning(text)
@@ -351,11 +354,11 @@ class TwilioVoiceCollectingOutputChannel(CollectingOutputChannel):
             await self._persist_message(self._message(recipient_id, text=message_part))
 
     async def send_text_with_buttons(
-        self,
-        recipient_id: Text,
-        text: Text,
-        buttons: List[Dict[Text, Any]],
-        **kwargs: Any,
+            self,
+            recipient_id: Text,
+            text: Text,
+            buttons: List[Dict[Text, Any]],
+            **kwargs: Any,
     ) -> None:
         """Convert buttons into a voice representation."""
         self._emoji_warning(text)
@@ -366,7 +369,7 @@ class TwilioVoiceCollectingOutputChannel(CollectingOutputChannel):
             await self._persist_message(self._message(recipient_id, text=b["title"]))
 
     async def send_image_url(
-        self, recipient_id: Text, image: Text, **kwargs: Any
+            self, recipient_id: Text, image: Text, **kwargs: Any
     ) -> None:
         """For voice channel do not send images."""
         rasa.shared.utils.io.raise_warning(
