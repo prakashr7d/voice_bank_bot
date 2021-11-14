@@ -21,7 +21,7 @@ from constants import REDIRECT_NUMBER
 
 logger = logging.Logger(__name__)
 
-
+user_silent_tracker = dict()
 class TwilioVoiceInput(InputChannel):
     """Input channel for Twilio Voice."""
 
@@ -256,23 +256,31 @@ class TwilioVoiceInput(InputChannel):
             # If the user doesn't respond resend the last message.
             else:
                 # Get last user utterance from tracker.
-                tracker = request.app.agent.tracker_store.retrieve(sender_id)
-                last_response = None
-                if tracker:
-                    last_response = next(
-                        (
-                            e
-                            for e in reversed(tracker.events)
-                            if isinstance(e, BotUttered)
-                        ),
-                        None,
-                    )
 
-                # If no previous utterance found use the reprompt_fallback phrase.
-                if last_response is None:
-                    last_response = self.reprompt_fallback_phrase
+                if sender_id not in user_silent_tracker:
+                    user_silent_tracker[sender_id] = 0
                 else:
-                    last_response = last_response.text
+                    user_silent_tracker[sender_id] += 1
+                if user_silent_tracker[sender_id] > 2:
+                    last_response = "hungup"
+                else:
+                    tracker = request.app.agent.tracker_store.retrieve(sender_id)
+
+                    if tracker:
+                        last_response = next(
+                            (
+                                e
+                                for e in reversed(tracker.events)
+                                if isinstance(e, BotUttered)
+                            ),
+                            None,
+                        )
+
+                    # If no previous utterance found use the reprompt_fallback phrase.
+                    if last_response is None:
+                        last_response = self.reprompt_fallback_phrase
+                    else:
+                        last_response = last_response.text
 
                 twilio_response = self._build_twilio_voice_response(
                     [{"text": last_response}]
