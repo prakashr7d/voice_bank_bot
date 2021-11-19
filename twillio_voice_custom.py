@@ -307,7 +307,9 @@ class TwilioVoiceInput(InputChannel):
         # Add pauses between messages.
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
+
             msg_text = message["text"]
+            user_silent_tracker[sender_id][LAST_ACTION] = msg_text
             if sender_id not in user_silent_tracker:
                 user_silent_tracker[sender_id] = {
                     LAST_ACTION: "",
@@ -340,7 +342,7 @@ class TwilioVoiceInput(InputChannel):
             else:
                 voice_response.hangup()
 
-        user_silent_tracker[sender_id][LAST_ACTION] = messages[-1][-1]
+
         return voice_response
 
 
