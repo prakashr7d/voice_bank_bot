@@ -6,7 +6,6 @@ from sanic.response import HTTPResponse
 from twilio.twiml.voice_response import VoiceResponse, Gather, Dial
 
 from typing import Text, Callable, Awaitable, List, Any, Dict, Optional
-
 import rasa.utils.io
 import rasa.shared.utils.io
 from rasa.shared.core.events import BotUttered
@@ -17,7 +16,7 @@ from rasa.core.channels.channel import (
     UserMessage,
 )
 
-from constants import REDIRECT_NUMBER
+from constants import REDIRECT_NUMBER, NONE_TIMES, REPEATED_TIMES, DEFAULT_FILE_NAME, LAST_ACTION
 
 logger = logging.Logger(__name__)
 
@@ -258,10 +257,14 @@ class TwilioVoiceInput(InputChannel):
                 # Get last user utterance from tracker.
 
                 if sender_id not in user_silent_tracker:
-                    user_silent_tracker[sender_id] = 0
+                    user_silent_tracker[sender_id] = {
+                        NONE_TIMES: 0,
+                        LAST_ACTION: "",
+                        REPEATED_TIMES: 0
+                    }
                 else:
-                    user_silent_tracker[sender_id] += 1
-                if user_silent_tracker[sender_id] > 2:
+                    user_silent_tracker[sender_id][NONE_TIMES] += 1
+                if user_silent_tracker[sender_id][NONE_TIMES] > 2:
                     last_response = "hungup"
                 else:
                     tracker = request.app.agent.tracker_store.retrieve(sender_id)
@@ -275,23 +278,21 @@ class TwilioVoiceInput(InputChannel):
                             ),
                             None,
                         )
-
                     # If no previous utterance found use the reprompt_fallback phrase.
                     if last_response is None:
-                        last_response = self.reprompt_fallback_phrase
+                        pass
                     else:
-                        last_response = last_response.text
+                        last_response = "sorry-didnt-understand/sorry-didnt-understand.mp3"
 
-                twilio_response = self._build_twilio_voice_response(
-                    [{"text": last_response}]
-                )
+                twilio_response = self._build_twilio_voice_response([{"text": last_response}], sender_id)
             return response.text(str(twilio_response), content_type="text/xml")
 
         return twilio_voice_webhook
 
     def _build_twilio_voice_response(
-            self, messages: List[Dict[Text, Any]]
+            self, messages: List[Dict[Text, Any]], sender_id
     ) -> VoiceResponse:
+        global user_silent_tracker
         """Builds the Twilio Voice Response object."""
         voice_response = VoiceResponse()
         gather = Gather(
@@ -307,7 +308,16 @@ class TwilioVoiceInput(InputChannel):
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
             msg_text = message["text"]
-            if not msg_text == "hungup":
+            if sender_id not in user_silent_tracker:
+                user_silent_tracker[sender_id] = {
+                    LAST_ACTION: "",
+                    NONE_TIMES: 0,
+                    REPEATED_TIMES: 0
+                }
+            if msg_text == user_silent_tracker[sender_id][LAST_ACTION]:
+                user_silent_tracker[sender_id][REPEATED_TIMES] += 1
+
+            if not user_silent_tracker[sender_id][REPEATED_TIMES] == 2 or not msg_text == "hangup/we-wont-call-again.mp3":
                 if i + 1 == len(messages):
                     if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                         voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
@@ -329,6 +339,8 @@ class TwilioVoiceInput(InputChannel):
                         voice_response.pause(length=1)
             else:
                 voice_response.hangup()
+
+        user_silent_tracker[sender_id][LAST_ACTION] = messages[-1][-1]
         return voice_response
 
 
