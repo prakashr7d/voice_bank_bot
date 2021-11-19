@@ -263,7 +263,7 @@ class TwilioVoiceInput(InputChannel):
                     }
 
                 user_silent_tracker[sender_id][NONE_TIMES] += 1
-                if user_silent_tracker[sender_id][NONE_TIMES] > 2:
+                if user_silent_tracker[sender_id][NONE_TIMES] > 1:
                     last_response = "hangup/we-wont-call-again.mp3"
                 else:
                     tracker = request.app.agent.tracker_store.retrieve(sender_id)
