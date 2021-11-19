@@ -109,7 +109,7 @@ class TwilioVoiceInput(InputChannel):
             credentials.get("initial_prompt", "hello"),
             credentials.get(
                 "reprompt_fallback_phrase",
-                "I'm sorry I didn't get that could you rephrase.",
+                "sorry-didnt-understand/sorry-didnt-understand.mp3",
             ),
             credentials.get("assistant_voice", "woman"),
             credentials.get("speech_timeout", "5"),
@@ -264,6 +264,7 @@ class TwilioVoiceInput(InputChannel):
 
                 user_silent_tracker[sender_id][NONE_TIMES] += 1
                 if user_silent_tracker[sender_id][NONE_TIMES] > 1:
+                    user_silent_tracker[sender_id][NONE_TIMES] = 0
                     last_response = "hangup/we-wont-call-again.mp3"
                 else:
                     tracker = request.app.agent.tracker_store.retrieve(sender_id)
@@ -320,6 +321,7 @@ class TwilioVoiceInput(InputChannel):
                 }
             if msg_text == user_silent_tracker[sender_id][LAST_ACTION]:
                 user_silent_tracker[sender_id][REPEATED_TIMES] += 1
+
             user_silent_tracker[sender_id][LAST_ACTION] = msg_text
             if not user_silent_tracker[sender_id][REPEATED_TIMES] == 2:
                 if msg_text == "hangup/we-wont-call-again.mp3":
@@ -345,7 +347,7 @@ class TwilioVoiceInput(InputChannel):
                         voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                         voice_response.pause(length=1)
             else:
-                print("got here")
+                user_silent_tracker[sender_id][REPEATED_TIMES] = 0
                 voice_response.hangup()
 
 
