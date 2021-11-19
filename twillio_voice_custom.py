@@ -255,15 +255,14 @@ class TwilioVoiceInput(InputChannel):
             # If the user doesn't respond resend the last message.
             else:
                 # Get last user utterance from tracker.
-
                 if sender_id not in user_silent_tracker:
                     user_silent_tracker[sender_id] = {
                         NONE_TIMES: 0,
                         LAST_ACTION: "",
                         REPEATED_TIMES: 0
                     }
-                else:
-                    user_silent_tracker[sender_id][NONE_TIMES] += 1
+
+                user_silent_tracker[sender_id][NONE_TIMES] += 1
                 if user_silent_tracker[sender_id][NONE_TIMES] > 2:
                     last_response = "hangup/we-wont-call-again.mp3"
                 else:
@@ -308,8 +307,11 @@ class TwilioVoiceInput(InputChannel):
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
 
-            msg_text = message["text"]
 
+            msg_text = message["text"]
+            if "press one" in msg_text:
+                voice_response.hangup()
+                continue
             if sender_id not in user_silent_tracker:
                 user_silent_tracker[sender_id] = {
                     LAST_ACTION: "",
