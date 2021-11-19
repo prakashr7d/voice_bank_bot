@@ -309,7 +309,7 @@ class TwilioVoiceInput(InputChannel):
         for i, message in enumerate(messages):
 
             msg_text = message["text"]
-            user_silent_tracker[sender_id][LAST_ACTION] = msg_text
+
             if sender_id not in user_silent_tracker:
                 user_silent_tracker[sender_id] = {
                     LAST_ACTION: "",
@@ -318,7 +318,7 @@ class TwilioVoiceInput(InputChannel):
                 }
             if msg_text == user_silent_tracker[sender_id][LAST_ACTION]:
                 user_silent_tracker[sender_id][REPEATED_TIMES] += 1
-
+            user_silent_tracker[sender_id][LAST_ACTION] = msg_text
             if not user_silent_tracker[sender_id][REPEATED_TIMES] == 2 or not msg_text == "hangup/we-wont-call-again.mp3":
                 if i + 1 == len(messages):
                     if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
