@@ -11,6 +11,7 @@ intents:
   - wait_time
   - fallback
   - deny
+  - hungup
   - how_long_to_transfer
   - i_dont_have_time
   - why_are_you_calling
