@@ -265,7 +265,7 @@ class TwilioVoiceInput(InputChannel):
                 else:
                     user_silent_tracker[sender_id][NONE_TIMES] += 1
                 if user_silent_tracker[sender_id][NONE_TIMES] > 2:
-                    last_response = "hungup"
+                    last_response = "hangup/we-wont-call-again.mp3"
                 else:
                     tracker = request.app.agent.tracker_store.retrieve(sender_id)
 
@@ -320,6 +320,7 @@ class TwilioVoiceInput(InputChannel):
                 user_silent_tracker[sender_id][REPEATED_TIMES] += 1
             user_silent_tracker[sender_id][LAST_ACTION] = msg_text
             if not user_silent_tracker[sender_id][REPEATED_TIMES] == 2 or not msg_text == "hangup/we-wont-call-again.mp3":
+
                 if i + 1 == len(messages):
                     if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                         voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
@@ -340,6 +341,7 @@ class TwilioVoiceInput(InputChannel):
                         voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                         voice_response.pause(length=1)
             else:
+                print("got here")
                 voice_response.hangup()
 
 
