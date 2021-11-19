@@ -58,3 +58,8 @@ rules:
   steps:
     - intent: transfer
     - action: utter_transfer
+
+- rule: hangup
+  steps:
+    - intent: hungup
+    - action: utter_hungup

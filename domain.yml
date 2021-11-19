@@ -65,7 +65,7 @@ responses:
   utter_i_dont_have_time:
     - text: "i-dont-have-time/i-dont-have-time.mp3"
   utter_hungup:
-    - text: "hungup"
+    - text: "hangup/we-wont-call-again.mp3"
 
 session_config:
   session_expiration_time: 60 # value in minutes
