@@ -313,10 +313,11 @@ class TwilioVoiceInput(InputChannel):
         for i, message in enumerate(messages):
             msg_text = message["text"]
 
-            for word in VOICE_MAIL_INDICATION:
-                if word in user_message:
-                    voice_response.hangup()
-                    break
+            if user_message:
+                for word in VOICE_MAIL_INDICATION:
+                    if word in user_message:
+                        voice_response.hangup()
+                        break
 
             if sender_id not in user_silent_tracker:
                 user_silent_tracker[sender_id] = {
