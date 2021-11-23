@@ -13,6 +13,14 @@ stories:
   - intent: affirm
   - action: utter_transfer
 
+- story: type_of_medicare
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: deny
+  - action: utter_not_qualified
+
 - story: type_of_medicare_deny
   steps:
   - intent: greet
