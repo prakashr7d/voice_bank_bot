@@ -286,7 +286,7 @@ class TwilioVoiceInput(InputChannel):
                     else:
                         last_response = "sorry-didnt-understand/sorry-didnt-understand.mp3"
 
-                twilio_response = self._build_twilio_voice_response([{"text": last_response}],
+                twilio_response = self._build_twilio_voice_response(messages=[{"text": last_response}],
                                                                     sender_id=sender_id,
                                                                     user_message=text)
             return response.text(str(twilio_response), content_type="text/xml")
