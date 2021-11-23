@@ -253,7 +253,7 @@ class TwilioVoiceInput(InputChannel):
                     )
                 )
 
-                twilio_response = self._build_twilio_voice_response(collector.messages, sender_id=sender_id)
+                twilio_response = self._build_twilio_voice_response(user_message=text, messages=collector.messages, sender_id=sender_id)
             # If the user doesn't respond resend the last message.
             else:
                 # Get last user utterance from tracker.
