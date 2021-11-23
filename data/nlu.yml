@@ -828,11 +828,11 @@ nlu:
       - 72
 
   - intent: are_you_there
-      examples: |
-        - Hey gabby are you there
-        - are you there
-        - where are you
-        - anybody on the other side?
-        - hey man, i can't hear you.
-        - are you online
-        - wait for me just a minute
+    examples: |
+      - Hey gabby are you there
+      - are you there
+      - where are you
+      - anybody on the other side?
+      - hey man, i can't hear you.
+      - are you online
+      - wait for me just a minute
