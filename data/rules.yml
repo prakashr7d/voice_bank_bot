@@ -63,3 +63,8 @@ rules:
   steps:
     - intent: hungup
     - action: utter_hungup
+
+- rule:
+  steps:
+    - intent: are_you_there
+    - action: utter_are_you_there

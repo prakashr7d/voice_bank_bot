@@ -17,6 +17,7 @@ intents:
   - why_are_you_calling
   - i_dont_want_to_change
   - tell_age
+  - are_you_there
 entities:
   - number
 
@@ -68,7 +69,11 @@ responses:
     - text: "i-dont-have-time/i-dont-have-time.mp3"
   utter_hungup:
     - text: "hangup/we-wont-call-again.mp3"
-
+  utter_not_qualified:
+    - text: "not-qualified/not-qualified.mp3"
+    - text: "not-qualified/not-qualified2.mp3"
+  utter_are_you_there:
+    - text: "are_you_there/yes-im-here.mp3"
 actions:
   - action_check_age
 session_config:
