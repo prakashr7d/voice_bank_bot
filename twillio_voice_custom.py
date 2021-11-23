@@ -247,6 +247,13 @@ class TwilioVoiceInput(InputChannel):
 
             # determine the response.
             if text is not None:
+                if sender_id not in user_silent_tracker:
+                    user_silent_tracker[sender_id] = {
+                        NONE_TIMES: 0,
+                        LAST_ACTION: "",
+                        REPEATED_TIMES: 0
+                    }
+                user_silent_tracker[sender_id][NONE_TIMES] = 0
                 await on_new_message(
                     UserMessage(
                         text, collector, sender_id, input_channel=input_channel,
