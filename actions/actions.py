@@ -13,21 +13,16 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
 from constants import NEWYORK
+import logging
 
 
-class ActionHelloWorld(Action):
+class ActionCheckAge(Action):
 
     def name(self) -> Text:
-        return "action_check_new_york"
+        return "action_check_age"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        state: Text = tracker.get_slot("GPE")
-        if state:
-            if state.lower() in NEWYORK:
-                dispatcher.utter_message("not-qualified.mp3")
-                return []
-        dispatcher.utter_message("transfer/transfer.mp3")
-        return []
+        age = tracker.get_slot("number")
+        logging.info(age)

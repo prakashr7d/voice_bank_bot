@@ -23,4 +23,25 @@ stories:
   - intent: affirm
   - action: utter_transfer
 
+- story: type_of_medicare_deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: tell_age
+  - action: action_check_age
+  - intent: affirm
+  - action: utter_transfer
+
+- story: type_of_medicare_deny
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: tell_age
+  - action: action_check_age
+  - intent: deny
+  - action: utter_red_white_blue
+  - intent: affirm
+  - action: utter_transfer
 

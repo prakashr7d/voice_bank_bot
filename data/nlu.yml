@@ -528,21 +528,6 @@ nlu:
       - cool beans
       - sounds good!
       - really
-      - i'm 64 and half
-      - i'm 65
-      - 65
-      - 66
-      - 67
-      - 68
-      - 69
-      - sixty nine
-      - sixty five
-      - seventy
-      - i am sixty four and half
-      - i am sixty eight
-      - i will be sixty five in a couple of month
-      - i just turned 64
-      - i'm sixty
       - SURE
       - Sure
       - Sweet
@@ -554,30 +539,6 @@ nlu:
       - Yes I do
       - Yes please
       - Yes please!
-      - i am 28 next month
-      - i am 15
-      - 20
-      - 28
-      - 30
-      - 50
-      - 51
-      - 52
-      - 53
-      - 54
-      - 55
-      - 56
-      - 57
-      - 58
-      - 59
-      - 60
-      - 61
-      - 62
-      - 63
-      - 64
-      - 65
-      - 77
-      - twenty
-      - 72
       - yes i am on medicare
       - i have medicare
       - yes i have both A and B
@@ -819,3 +780,49 @@ nlu:
       - i was getting call 50 times a day please shut the fuck up and don't call me
       - don't you understand i am saying don't call me again and again
       - don't call me
+
+  - intent: tell_age
+    examples: |
+      - i'm 19 years old
+      - i am 29 years old
+      - i am 50
+      - My age is 100
+      - i'm 64 and half
+      - i'm 65
+      - 65
+      - 66
+      - 67
+      - 68
+      - 69
+      - sixty nine
+      - sixty five
+      - seventy
+      - i am sixty four and half
+      - i am sixty eight
+      - i will be sixty five in a couple of month
+      - i just turned 64
+      - i'm sixty
+      - i am 28 next month
+      - i am 15
+      - 20
+      - 28
+      - 30
+      - 50
+      - 51
+      - 52
+      - 53
+      - 54
+      - 55
+      - 56
+      - 57
+      - 58
+      - 59
+      - 60
+      - 61
+      - 62
+      - 63
+      - 64
+      - 65
+      - 77
+      - twenty
+      - 72

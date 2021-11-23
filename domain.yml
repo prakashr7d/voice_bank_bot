@@ -16,11 +16,12 @@ intents:
   - i_dont_have_time
   - why_are_you_calling
   - i_dont_want_to_change
+  - tell_age
 entities:
-  - GPE
+  - number
 
 slots:
-  GPE:
+  number:
     type: "text"
 
 
@@ -68,6 +69,8 @@ responses:
   utter_hungup:
     - text: "hangup/we-wont-call-again.mp3"
 
+actions:
+  - action_check_age
 session_config:
   session_expiration_time: 60 # value in minutes
   carry_over_slots_to_new_session: true

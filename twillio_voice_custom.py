@@ -16,11 +16,13 @@ from rasa.core.channels.channel import (
     UserMessage,
 )
 
-from constants import REDIRECT_NUMBER, NONE_TIMES, REPEATED_TIMES, DEFAULT_FILE_NAME, LAST_ACTION
+from constants import REDIRECT_NUMBER, NONE_TIMES, REPEATED_TIMES, DEFAULT_FILE_NAME, LAST_ACTION, VOICE_MAIL_INDICATION
 
 logger = logging.Logger(__name__)
 
 user_silent_tracker = dict()
+
+
 class TwilioVoiceInput(InputChannel):
     """Input channel for Twilio Voice."""
 
@@ -284,13 +286,15 @@ class TwilioVoiceInput(InputChannel):
                     else:
                         last_response = "sorry-didnt-understand/sorry-didnt-understand.mp3"
 
-                twilio_response = self._build_twilio_voice_response([{"text": last_response}], sender_id=sender_id)
+                twilio_response = self._build_twilio_voice_response([{"text": last_response}],
+                                                                    sender_id=sender_id,
+                                                                    user_message=text)
             return response.text(str(twilio_response), content_type="text/xml")
 
         return twilio_voice_webhook
 
     def _build_twilio_voice_response(
-            self, messages: List[Dict[Text, Any]], sender_id
+            self, user_message: Text, messages: List[Dict[Text, Any]], sender_id
     ) -> VoiceResponse:
         global user_silent_tracker
         """Builds the Twilio Voice Response object."""
@@ -307,12 +311,13 @@ class TwilioVoiceInput(InputChannel):
         # Add pauses between messages.
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
-
-
             msg_text = message["text"]
-            if "press one" in msg_text:
-                voice_response.hangup()
-                continue
+
+            for word in VOICE_MAIL_INDICATION:
+                if word in user_message:
+                    voice_response.hangup()
+                    break
+
             if sender_id not in user_silent_tracker:
                 user_silent_tracker[sender_id] = {
                     LAST_ACTION: "",
@@ -349,7 +354,6 @@ class TwilioVoiceInput(InputChannel):
             else:
                 user_silent_tracker[sender_id][REPEATED_TIMES] = 0
                 voice_response.hangup()
-
 
         return voice_response
 
