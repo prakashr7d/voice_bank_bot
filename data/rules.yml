@@ -51,25 +51,26 @@ rules:
 
 - rule: transfer
   steps:
-    - intent: transfer
-    - action: utter_transfer
+  - intent: transfer
+  - action: utter_transfer
 
 - rule: hangup
   steps:
-    - intent: hungup
-    - action: utter_hungup
+  - intent: hungup
+  - action: utter_hungup
 
 - rule: are you there
   steps:
-    - intent: are_you_there
-    - action: utter_are_you_there
+  - intent: are_you_there
+  - action: utter_are_you_there
 
 - rule: where are you from
   steps:
-    - intent: where_are_you_from
-    - action: utter_where_are_you_from
+  - intent: where_are_you_from
+  - action: utter_where_are_you_from
 
 - rule: no question
   steps:
-    - intent: no_questions
-    - action: utter_no_questions
+  - intent: no_questions
+  - action: utter_no_questions
+
