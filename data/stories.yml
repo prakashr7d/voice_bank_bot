@@ -53,14 +53,14 @@ stories:
   - intent: affirm
   - action: utter_transfer
 
-- rule: why_are_you_calling
+- story: why_are_you_calling
   steps:
   - intent: why_are_you_calling
   - action: utter_recorded_line
   - intent: affirm
   - action: utter_age
 
-- rule: why_are_you_calling_deny
+- story: why_are_you_calling_deny
   steps:
   - intent: why_are_you_calling
   - action: utter_recorded_line
