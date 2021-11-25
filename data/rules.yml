@@ -65,11 +65,11 @@ rules:
     - action: utter_are_you_there
 
 - rule: where are you from
-  stpes:
+  steps:
     - intent: where_are_you_from
     - action: utter_where_are_you_from
 
 - rule: no question
-  stpes:
+  steps:
     - intent: no_questions
     - action: utter_no_questions
