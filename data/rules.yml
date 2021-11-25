@@ -6,11 +6,6 @@ rules:
   - intent: ask_name
   - action: utter_ask_name
 
-- rule: why_are_you_calling
-  steps:
-  - intent: why_are_you_calling
-  - action: utter_age
-  - action: utter_type_of_medicare
 
 - rule: i_dont_want_to_change
   steps:
@@ -64,7 +59,17 @@ rules:
     - intent: hungup
     - action: utter_hungup
 
-- rule:
+- rule: are you there
   steps:
     - intent: are_you_there
     - action: utter_are_you_there
+
+- rule: where are you from
+  stpes:
+    - intent: where_are_you_from
+    - action: utter_where_are_you_from
+
+- rule: no question
+  stpes:
+    - intent: no_questions
+    - action: utter_no_questions

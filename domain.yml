@@ -18,6 +18,7 @@ intents:
   - i_dont_want_to_change
   - tell_age
   - are_you_there
+  - where_are_you_from
 entities:
   - number
 
@@ -74,6 +75,14 @@ responses:
     - text: "not-qualified/not-qualified2.mp3"
   utter_are_you_there:
     - text: "are_you_there/yes-im-here.mp3"
+  utter_where_are_you_from:
+    - text: "where_are_you_from/i+am+based+on+san+francisco.mp3"
+  utter_no_questions:
+    - text: "no_question/no+i+haven%27t.mp3"
+  utter_recorded_line:
+    - text: "intro/i%27m_calling_on_the_recorded_line.mp3"
+
+
 actions:
   - action_check_age
 session_config:

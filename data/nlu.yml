@@ -836,3 +836,19 @@ nlu:
       - hey man, i can't hear you.
       - are you online
       - wait for me just a minute
+
+  - intent: where_are_you_from
+    examples: |
+      - where are you from
+      - what is your origin
+      - can you say where you was located
+      - where are talking from.
+      - which branch you are
+      - what state is it.
+
+  - intent: no_questions
+    examples: |
+      - Did you got vacinated
+      - have your vaccnines are done
+      - what about your vaccine situation in you
+      - how many shots you got.
