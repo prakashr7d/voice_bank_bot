@@ -323,8 +323,8 @@ class TwilioVoiceInput(InputChannel):
 
             if user_message:
                 for word in VOICE_MAIL_INDICATION:
-                    logger.error(f"{word} --> {user_message}")
-                    if word in user_message:
+                    logger.error(f"{word} --> {user_message.replace('.', '')}")
+                    if word in user_message.replace(".", ""):
                         voice_response.hangup()
                         break
 
