@@ -313,6 +313,7 @@ class TwilioVoiceInput(InputChannel):
             speechTimeout=self.speech_timeout,
             speechModel=self.speech_model,
             enhanced=self.enhanced,
+
         )
 
         # Add pauses between messages.
@@ -322,6 +323,7 @@ class TwilioVoiceInput(InputChannel):
 
             if user_message:
                 for word in VOICE_MAIL_INDICATION:
+                    logger.error(f"{word} --> {user_message}")
                     if word in user_message:
                         voice_response.hangup()
                         break
