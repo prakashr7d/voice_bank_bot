@@ -16,7 +16,8 @@ from rasa.core.channels.channel import (
     UserMessage,
 )
 
-from constants import REDIRECT_NUMBER, NONE_TIMES, REPEATED_TIMES, DEFAULT_FILE_NAME, LAST_ACTION, VOICE_MAIL_INDICATION
+from constants import REDIRECT_NUMBER, NONE_TIMES, REPEATED_TIMES, DEFAULT_FILE_NAME, LAST_ACTION, \
+    VOICE_MAIL_INDICATION, hangup_cond
 
 logger = logging.Logger(__name__)
 
@@ -339,7 +340,7 @@ class TwilioVoiceInput(InputChannel):
 
             user_silent_tracker[sender_id][LAST_ACTION] = msg_text
             if not user_silent_tracker[sender_id][REPEATED_TIMES] == 2:
-                if msg_text == "hangup/we-wont-call-again.mp3":
+                if msg_text in hangup_cond:
                     voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                     voice_response.hangup()
                 if i + 1 == len(messages):
