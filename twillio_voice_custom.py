@@ -361,7 +361,7 @@ class TwilioVoiceInput(InputChannel):
                         logger.error("got here")
                     else:
                         voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                        voice_response.pause(length=1)
+                        voice_response.pause(length=3)
             else:
                 user_silent_tracker[sender_id][REPEATED_TIMES] = 0
                 voice_response.hangup()
