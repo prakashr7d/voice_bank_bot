@@ -835,6 +835,8 @@ nlu:
       - anybody on the other side?
       - hey man, i can't hear you.
       - are you online
+      - gabby
+      - gabby are you there
       - wait for me just a minute
 
   - intent: where_are_you_from

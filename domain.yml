@@ -77,6 +77,7 @@ responses:
     - text: "not-qualified/not-qualified2.mp3"
   utter_are_you_there:
     - text: "are_you_there/yes-im-here.mp3"
+    - text: "are_you_there/yes.mp3"
   utter_where_are_you_from:
     - text: "where_are_you_from/i+am+based+on+san+francisco.mp3"
   utter_no_questions:
