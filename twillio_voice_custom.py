@@ -352,7 +352,6 @@ class TwilioVoiceInput(InputChannel):
                     else:
                         gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                         voice_response.append(gather)
-
                 else:
                     if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
                         voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
@@ -361,8 +360,8 @@ class TwilioVoiceInput(InputChannel):
                         logger.error("got here")
                     else:
                         gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                        gather.pause(length=3)
                         voice_response.append(gather)
-                        voice_response.pause(length=3)
             else:
                 user_silent_tracker[sender_id][REPEATED_TIMES] = 0
                 voice_response.hangup()
