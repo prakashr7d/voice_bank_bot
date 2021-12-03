@@ -59,8 +59,10 @@ responses:
     - text: "out-of-scope/out-of-scope-3.mp3"
     - text: "out-of-scope/out-of-scope.mp3"
     - text: "out-of-scope/out-of-scope-2.mp3"
+    - text: "out-of-scope/i%27m+sorry+but+i+can%27t+answer+that+question.mp3"
   utter_transfer:
     - text: "transfer/transfer-wait-for-a-sec.mp3"
+    - text: "transfer/let+me+connect+you-qualify+for+benefits+or+lower+your+cost.mp3"
   utter_wait_time:
     - text: "how-long-wait/how-long-is-it-going-to-take.mp3"
   utter_how_long_to_transfer:
@@ -81,8 +83,8 @@ responses:
     - text: "no_question/no+i+haven%27t.mp3"
   utter_recorded_line:
     - text: "intro/i%27m_calling_on_the_recorded_line.mp3"
-
-
+  utter_hold_for_one_second:
+    - text: "hold/NoProblem+2.mp3"
 actions:
   - action_check_age
 session_config:

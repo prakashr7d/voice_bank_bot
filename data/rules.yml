@@ -74,3 +74,8 @@ rules:
   - intent: no_questions
   - action: utter_no_questions
 
+- rule: hold_for_one_second
+  steps:
+  - intent: hold_for_one_second
+  - action: utter_hold_for_one_second
+

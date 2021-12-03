@@ -241,7 +241,7 @@ nlu:
       - my phone number
   - intent: affirm
     examples: |
-      - - yes
+      - yes
       - yes i do
       - i have both
       - i have the red white and blue card
@@ -741,7 +741,7 @@ nlu:
       - no i won't
       - no ma'am
       - no sir
-      - no sorry
+      - no
       - no thank s
       - no you did it wrong
       - no!!!!
@@ -759,7 +759,7 @@ nlu:
       - not right now
       - not yet
       - nö
-      - sorry not right now
+      - not right now
       - still dont want to tell
       - thanks but no thanks
       - this sucks
@@ -852,3 +852,12 @@ nlu:
       - have your vaccnines are done
       - what about your vaccine situation in you
       - how many shots you got.
+
+  - intent: hold_for_one_second
+    examples: |
+      - can you hold for one second.
+      - please wait for one second
+      - just a minute
+      - sorry just a minute
+      - please one second 
+      - wait for me.
