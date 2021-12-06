@@ -240,7 +240,7 @@ class TwilioVoiceInput(InputChannel):
             input_channel = self.name()
             call_status = request.form.get("CallStatus")
             collector = TwilioVoiceCollectingOutputChannel()
-
+            logger.error(text)
             # Provide an initial greeting to answer the user's call.
             if (text is None) and (call_status == "ringing"):
                 text = self.initial_prompt
@@ -318,6 +318,7 @@ class TwilioVoiceInput(InputChannel):
 
         # Add pauses between messages.
         # Add a listener to the last message to listen for user response.
+        logger.error(messages)
         for i, message in enumerate(messages):
             msg_text = message["text"]
             if msg_text == "voice_mail":
