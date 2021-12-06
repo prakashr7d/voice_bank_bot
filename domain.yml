@@ -88,6 +88,8 @@ responses:
   utter_hold_for_one_second:
     - text: "hold/NoProblem+2.mp3"
     - text: "hold/sure+no+problem.mp3"
+  utter_voice_mail:
+    - text: "voice_mail"
 actions:
   - action_check_age
 session_config:

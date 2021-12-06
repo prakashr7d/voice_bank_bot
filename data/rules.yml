@@ -79,3 +79,8 @@ rules:
   - intent: hold_for_one_second
   - action: utter_hold_for_one_second
 
+- rule: voice_mail
+  steps:
+  - intent: voice_mail
+  - action: utter_voice_mail
+

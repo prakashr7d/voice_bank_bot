@@ -863,3 +863,11 @@ nlu:
       - sorry just a minute
       - please one second 
       - wait for me.
+
+  - intent: voice_mail
+    examples: |
+      - you have reached the voice mail
+      - voice mail inbox is full
+      - User is busy you can leave a voice mail after a beep.
+      
+

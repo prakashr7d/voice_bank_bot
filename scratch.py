@@ -4,13 +4,17 @@ from twilio.rest import Client
 
 # Find your Account SID and Auth Token at twilio.com/console
 # and set the environment variables. See http://twil.io/secure
-account_sid = os.environ['TWILIO_ACCOUNT_SID']
-auth_token = os.environ['TWILIO_AUTH_TOKEN']
+account_sid = "ACd25b0b811ff8f87820ca9fbe03f75ded"
+auth_token = "9b3f1cc7aad65389f3b286b6aceb2c3e"
 client = Client(account_sid, auth_token)
 
-execution = client.studio \
-                  .flows('FW6e34382992fb959be21296834c3f5525') \
-                  .executions \
-                  .create(to='+918870539376', from_='+18182966662')
+call = client.calls \
+    .create(
+         machine_detection='Enable',
 
-print(execution.sid)
+         url='http://143.110.236.122:2001/webhooks/twilio_voice/webhook',
+         to='+918870539376',
+         from_='+17377778443'
+     )
+
+print(call.sid)
