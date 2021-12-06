@@ -7,7 +7,7 @@ stories:
   - intent: greet
   - action: utter_greet
   - action: utter_age
-  - intent: how_are_you
+  - intent: how_am_i
   - action: utter_age
 
 - story: type_of_medicare

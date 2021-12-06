@@ -21,6 +21,7 @@ intents:
   - where_are_you_from
   - hold_for_one_second
   - voice_mail
+  - how_am_i
 entities:
   - number
 

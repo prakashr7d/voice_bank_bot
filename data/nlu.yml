@@ -869,7 +869,7 @@ nlu:
       - press four
       
 
-  - intent: how_are_you
+  - intent: how_am_i
     examples: |
       - amayzing
       - amazing!
