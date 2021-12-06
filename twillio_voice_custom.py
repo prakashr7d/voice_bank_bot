@@ -236,9 +236,9 @@ class TwilioVoiceInput(InputChannel):
         async def receive(request: Request) -> Text:
             logger.error(user_silent_tracker)
             sender_id = request.form.get("From")
-            print("sender_id: ", sender_id)
+            logger.error("sender_id: ", sender_id)
             text = request.form.get("SpeechResult")
-            print("speech Result:", text)
+            logger.error("speech Result:", text)
             input_channel = self.name()
             call_status = request.form.get("CallStatus")
             logger.error(text)
