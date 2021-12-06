@@ -235,6 +235,7 @@ class TwilioVoiceInput(InputChannel):
         @twilio_voice_webhook.route("/webhook", methods=["POST"])
         async def receive(request: Request) -> Text:
             logger.error(user_silent_tracker)
+            print(request.json)
             sender_id = request.form.get("From")
             text = request.form.get("SpeechResult")
             input_channel = self.name()
