@@ -344,7 +344,7 @@ class TwilioVoiceInput(InputChannel):
                         voice_response.append(dial)
                         logger.error("got here")
                     else:
-                        gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                        voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                         voice_response.append(gather)
                 else:
                     if msg_text == "transfer/transfer-wait-for-a-sec.mp3":
