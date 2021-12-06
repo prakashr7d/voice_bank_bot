@@ -353,9 +353,13 @@ class TwilioVoiceInput(InputChannel):
                         voice_response.append(dial)
                         logger.error("got here")
                     else:
-                        voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
-                        gather.pause(length=3)
-                        voice_response.append(gather)
+                        if msg_text == "intro/intro-how-are-you.mp3":
+                            voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                            gather.pause(length=3)
+                            voice_response.append(gather)
+                        else:
+                            voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                            voice_response.pause(length=1)
             else:
                 user_silent_tracker[sender_id][REPEATED_TIMES] = 0
                 voice_response.hangup()
