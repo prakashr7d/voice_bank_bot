@@ -292,7 +292,6 @@ nlu:
       - 72
       - seventeen
       - fifty six
-      - I am good enough ag
       - i'm old
       - am old
       - i'm too old
@@ -304,10 +303,6 @@ nlu:
       - ye splease
       - yea
       - really
-      - Accept
-      - Awesome!
-      - Good
-      - Great
       - I accept
       - I accept.
       - I agree
@@ -360,10 +355,6 @@ nlu:
       - ah ok
       - alright
       - alright, cool
-      - amayzing
-      - amazing!
-      - awesome
-      - awesome!
       - confirm
       - cool story bro
       - definitely yes without a doubt
@@ -440,7 +431,6 @@ nlu:
       - that sounds fine
       - that's great
       - thats fine
-      - thats good
       - thats great
       - top
       - uh-huh
@@ -879,3 +869,16 @@ nlu:
       - press four
       
 
+  - intent: how_are_you
+    examples: |
+      - amayzing
+      - amazing!
+      - awesome
+      - awesome!
+      - i am good
+      - never before
+      - not good
+      - sad
+      - good
+      - i am great
+  

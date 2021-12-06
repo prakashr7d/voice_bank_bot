@@ -354,7 +354,7 @@ class TwilioVoiceInput(InputChannel):
                         logger.error("got here")
                     else:
                         if msg_text == "intro/intro-how-are-you.mp3":
-                            voice_response.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
+                            gather.play(f"https://rasa-medicare.s3.amazonaws.com/{msg_text}")
                             gather.pause(length=3)
                             voice_response.append(gather)
                         else:

@@ -1,6 +1,15 @@
 version: "2.0"
 
 stories:
+
+- story: how are you
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: how_are_you
+  - action: utter_age
+
 - story: type_of_medicare
   steps:
   - intent: greet
