@@ -780,6 +780,7 @@ nlu:
       - i was getting call 50 times a day please shut the fuck up and don't call me
       - don't you understand i am saying don't call me again and again
       - don't call me
+      - Please stop this nonsense
 
   - intent: tell_age
     examples: |

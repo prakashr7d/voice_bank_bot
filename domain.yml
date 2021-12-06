@@ -20,6 +20,7 @@ intents:
   - are_you_there
   - where_are_you_from
   - hold_for_one_second
+  - voice_mail
 entities:
   - number
 

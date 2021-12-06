@@ -320,14 +320,8 @@ class TwilioVoiceInput(InputChannel):
         # Add a listener to the last message to listen for user response.
         for i, message in enumerate(messages):
             msg_text = message["text"]
-
-            if user_message:
-                for word in VOICE_MAIL_INDICATION:
-                    logger.error(f"{word} --> {user_message.replace('.', '')}")
-                    if word.lower() in user_message.replace(".", "").lower():
-                        voice_response.hangup()
-                        break
-
+            if msg_text == "voice_mail":
+                voice_response.hangup()
             if sender_id not in user_silent_tracker:
                 user_silent_tracker[sender_id] = {
                     LAST_ACTION: "",
