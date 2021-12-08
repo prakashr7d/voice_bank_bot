@@ -23,11 +23,11 @@ class ActionCheckAge(Action):
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+            domain: Dict[Text, Any]):
         age = tracker.get_slot("number")
         if age:
             if age > 64:
-                dispatcher.utter_message("medicare-type/and-are-you-on-medicare-part-a-and-b.mp3")
+                dispatcher.utter_message(template="utter_type_of_medicare")
             else:
                 dispatcher.utter_message(template="utter_not_qualified")
         else:

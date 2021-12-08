@@ -1,87 +1,96 @@
 version: "2.0"
 
 rules:
-- rule: respond to chitchat
-  steps:
-  - intent: ask_name
-  - action: utter_ask_name
-
 
 - rule: i_dont_want_to_change
   steps:
   - intent: i_dont_want_to_change
   - action: utter_red_white_blue
+  wait_for_user_input: false
 
 - rule: ask_name
   steps:
   - intent: ask_name
   - action: utter_ask_name
+  wait_for_user_input: false
 
 - rule: how_are_you
   steps:
   - intent: how_are_you
   - action: utter_how_are_you
   - action: utter_age
+  wait_for_user_input: false
 
 - rule: how_long_to_transfer
   steps:
   - intent: how_long_to_transfer
   - action: utter_wait_time
   - action: utter_transfer
+  wait_for_user_input: false
 
 - rule: i_dont_have_time
   steps:
   - intent: i_dont_have_time
   - action: utter_transfer
+  wait_for_user_input: false
 
 - rule: wait_time
   steps:
   - intent: wait_time
   - action: utter_transfer
+  wait_for_user_input: false
 
 - rule: nlu_fallback
   steps:
   - intent: nlu_fallback
   - action: utter_fallback
+  wait_for_user_input: false
 
 - rule: out of scope
   steps:
   - intent: out_of_scope
   - action: utter_out_of_scope
+  wait_for_user_input: false
 
 - rule: transfer
   steps:
   - intent: transfer
   - action: utter_transfer
+  wait_for_user_input: false
 
 - rule: hangup
   steps:
   - intent: hungup
   - action: utter_hungup
 
+
 - rule: are you there
   steps:
   - intent: are_you_there
   - action: utter_are_you_there
+  wait_for_user_input: false
 
 - rule: where are you from
   steps:
   - intent: where_are_you_from
   - action: utter_where_are_you_from
+  wait_for_user_input: false
 
 - rule: no question
   steps:
   - intent: no_questions
   - action: utter_no_questions
+  wait_for_user_input: false
 
 - rule: hold_for_one_second
   steps:
   - intent: hold_for_one_second
   - action: utter_hold_for_one_second
+  wait_for_user_input: false
 
 - rule: voice_mail
   steps:
   - intent: voice_mail
   - action: utter_voice_mail
-
+  wait_for_user_input: false
 
