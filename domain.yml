@@ -1,99 +1,130 @@
-version: "2.0"
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
-  - greet
-  - ask_name
-  - how_are_you
-  - where_did_you_get_number
-  - affirm
-  - out_of_scope
-  - transfer
-  - wait_time
-  - fallback
-  - deny
-  - hungup
-  - how_long_to_transfer
-  - i_dont_have_time
-  - why_are_you_calling
-  - i_dont_want_to_change
-  - tell_age
-  - are_you_there
-  - where_are_you_from
-  - hold_for_one_second
-  - voice_mail
-  - how_am_i
+- greet:
+    use_entities: true
+- ask_name:
+    use_entities: true
+- how_are_you:
+    use_entities: true
+- where_did_you_get_number:
+    use_entities: true
+- affirm:
+    use_entities: true
+- out_of_scope:
+    use_entities: true
+- transfer:
+    use_entities: true
+- wait_time:
+    use_entities: true
+- fallback:
+    use_entities: true
+- deny:
+    use_entities: true
+- hungup:
+    use_entities: true
+- how_long_to_transfer:
+    use_entities: true
+- i_dont_have_time:
+    use_entities: true
+- why_are_you_calling:
+    use_entities: true
+- i_dont_want_to_change:
+    use_entities: true
+- tell_age:
+    use_entities: true
+- are_you_there:
+    use_entities: true
+- where_are_you_from:
+    use_entities: true
+- hold_for_one_second:
+    use_entities: true
+- voice_mail:
+    use_entities: true
+- how_am_i:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+- no_questions:
+    use_entities: true
+- thankyou:
+    use_entities: true
 entities:
-  - number
-
+- number
+- name
 slots:
   number:
-    type: "text"
-
-
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 responses:
   utter_ask_name:
-    - text: "my-name/gabby-1.mp3"
+  - text: my-name/gabby-1.mp3
   utter_greet:
-    - text: "intro/intro-2.mp3"
-    - text: "intro/intro-how-are-you.mp3"
-    - text: "intro/intro-3.mp3"
+  - text: intro/intro-2.mp3
+  - text: intro/intro-how-are-you.mp3
+  - text: intro/intro-3.mp3
   utter_where_did_you_get_number:
-    - text: "where-did-you-get-my-number/where-number.mp3"
+  - text: where-did-you-get-my-number/where-number.mp3
   utter_age:
-    - text: "age/age-2.mp3"
-    - text: "age/age-3.mp3"
-    - text: "age/age-4.mp3"
-    - text: "age/ask-age.mp3"
+  - text: age/age-2.mp3
+  - text: age/age-3.mp3
+  - text: age/age-4.mp3
+  - text: age/ask-age.mp3
   utter_why_are_you_calling:
-    - text: "why-are-you-calling/no-cost.mp3"
+  - text: why-are-you-calling/no-cost.mp3
   utter_i_dont_want_to_change:
-    - text: "i-dont-want-to-change/i-dont-want-to-change.mp3"
+  - text: i-dont-want-to-change/i-dont-want-to-change.mp3
   utter_how_are_you:
-    - text: "how-are-you/doing-good.mp3"
+  - text: how-are-you/doing-good.mp3
   utter_type_of_medicare:
-    - text: "medicare-type/and-are-you-on-medicare-part-a-and-b.mp3"
-    - text: "medicare-type/medi-a-and-b.mp3"
+  - text: medicare-type/and-are-you-on-medicare-part-a-and-b.mp3
+  - text: medicare-type/medi-a-and-b.mp3
   utter_red_white_blue:
-    - text: "type-of-card/do-you-have-redwhiteblue-card.mp3"
-    - text: "type-of-card/re-white-blue.mp3"
+  - text: type-of-card/do-you-have-redwhiteblue-card.mp3
+  - text: type-of-card/re-white-blue.mp3
   utter_fallback:
-    - text: "sorry-didnt-understand/sorry-didnt-understand.mp3"
+  - text: sorry-didnt-understand/sorry-didnt-understand.mp3
   utter_out_of_scope:
-    - text: "out-of-scope/out-of-scope-3.mp3"
-    - text: "out-of-scope/out-of-scope.mp3"
-    - text: "out-of-scope/out-of-scope-2.mp3"
-    - text: "out-of-scope/i%27m+sorry+but+i+can%27t+answer+that+question.mp3"
+  - text: out-of-scope/out-of-scope-3.mp3
+  - text: out-of-scope/out-of-scope.mp3
+  - text: out-of-scope/out-of-scope-2.mp3
+  - text: out-of-scope/i%27m+sorry+but+i+can%27t+answer+that+question.mp3
   utter_transfer:
-    - text: "transfer/transfer-wait-for-a-sec.mp3"
-    - text: "transfer/let+me+connect+you-qualify+for+benefits+or+lower+your+cost.mp3"
+  - text: transfer/transfer-wait-for-a-sec.mp3
+  - text: transfer/let+me+connect+you-qualify+for+benefits+or+lower+your+cost.mp3
   utter_wait_time:
-    - text: "how-long-wait/how-long-is-it-going-to-take.mp3"
+  - text: how-long-wait/how-long-is-it-going-to-take.mp3
   utter_how_long_to_transfer:
-    - text: "what-is-a-few-minutes/how-long-its-going-to-take.mp3"
-    - text: "what-is-a-few-minutes/5-to-10.mp3"
+  - text: what-is-a-few-minutes/how-long-its-going-to-take.mp3
+  - text: what-is-a-few-minutes/5-to-10.mp3
   utter_i_dont_have_time:
-    - text: "i-dont-have-time/i-dont-have-time.mp3"
+  - text: i-dont-have-time/i-dont-have-time.mp3
   utter_hungup:
-    - text: "hangup/we-wont-call-again.mp3"
+  - text: hangup/we-wont-call-again.mp3
   utter_not_qualified:
-    - text: "not-qualified/not-qualified.mp3"
-    - text: "not-qualified/not-qualified2.mp3"
+  - text: not-qualified/not-qualified.mp3
+  - text: not-qualified/not-qualified2.mp3
   utter_are_you_there:
-    - text: "are_you_there/yes-im-here.mp3"
-    - text: "are_you_there/yes.mp3"
+  - text: are_you_there/yes-im-here.mp3
+  - text: are_you_there/yes.mp3
   utter_where_are_you_from:
-    - text: "where_are_you_from/i+am+based+on+san+francisco.mp3"
+  - text: where_are_you_from/i+am+based+on+san+francisco.mp3
   utter_no_questions:
-    - text: "no_question/no+i+haven%27t.mp3"
+  - text: no_question/no+i+haven%27t.mp3
   utter_recorded_line:
-    - text: "intro/i%27m_calling_on_the_recorded_line.mp3"
+  - text: intro/i%27m_calling_on_the_recorded_line.mp3
   utter_hold_for_one_second:
-    - text: "hold/NoProblem+2.mp3"
-    - text: "hold/sure+no+problem.mp3"
+  - text: hold/NoProblem+2.mp3
+  - text: hold/sure+no+problem.mp3
   utter_voice_mail:
-    - text: "voice_mail"
+  - text: voice_mail
 actions:
-  - action_check_age
-session_config:
-  session_expiration_time: 60 # value in minutes
-  carry_over_slots_to_new_session: true
+- action_check_age
+forms: {}
+e2e_actions: []

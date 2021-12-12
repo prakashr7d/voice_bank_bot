@@ -1,7 +1,5 @@
 version: "2.0"
-
 stories:
-
 - story: how are you
   steps:
   - intent: greet
@@ -9,7 +7,6 @@ stories:
   - action: utter_age
   - intent: how_am_i
   - action: utter_age
-
 - story: type_of_medicare
   steps:
   - intent: greet
@@ -21,7 +18,6 @@ stories:
   - action: utter_red_white_blue
   - intent: affirm
   - action: utter_transfer
-
 - story: type_of_medicare
   steps:
   - intent: greet
@@ -29,7 +25,6 @@ stories:
   - action: utter_age
   - intent: deny
   - action: utter_not_qualified
-
 - story: type_of_medicare_deny
   steps:
   - intent: greet
@@ -39,7 +34,6 @@ stories:
   - action: utter_type_of_medicare
   - intent: affirm
   - action: utter_transfer
-
 - story: type_of_medicare_deny
   steps:
   - intent: greet
@@ -49,7 +43,6 @@ stories:
   - action: action_check_age
   - intent: affirm
   - action: utter_transfer
-
 - story: type_of_medicare_deny
   steps:
   - intent: greet
@@ -61,18 +54,88 @@ stories:
   - action: utter_red_white_blue
   - intent: affirm
   - action: utter_transfer
-
 - story: why_are_you_calling
   steps:
   - intent: why_are_you_calling
   - action: utter_recorded_line
   - intent: affirm
   - action: utter_age
-
 - story: why_are_you_calling_deny
   steps:
   - intent: why_are_you_calling
   - action: utter_recorded_line
   - intent: deny
   - action: utter_age
-
+- story: Story from Conversation ID 4d87238d6cad4657bd719dd112f8b8d0
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: tell_age
+    entities:
+    - number: 74
+  - slot_was_set:
+    - number: 74
+  - action: action_check_age
+  - intent: deny
+  - slot_was_set:
+    - number: 74
+  - action: utter_red_white_blue
+  - intent: affirm
+  - action: utter_transfer
+- story: Story from Conversation ID 3329c33342cc47c18c9cae8e6cefe133
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: affirm
+  - action: utter_type_of_medicare
+  - intent: are_you_there
+  - action: utter_are_you_there
+  - action: action_back
+- story: Story from Conversation ID e953c19a71384aa2aeb6cd8fde259f35
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: affirm
+  - action: utter_type_of_medicare
+  - intent: ask_name
+  - action: utter_ask_name
+  - action: action_back
+  - intent: affirm
+  - action: utter_type_of_medicare
+  - intent: affirm
+  - action: utter_transfer
+- story: Story from Conversation ID e953c19a71384aa2aeb6cd8fde259f35
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: affirm
+  - action: utter_type_of_medicare
+  - intent: ask_name
+  - action: utter_ask_name
+  - action: action_back
+  - intent: affirm
+  - action: utter_type_of_medicare
+  - intent: affirm
+  - action: utter_transfer
+- story: Story from Conversation ID 9282b44e462b413d8a58d928dee24a03
+  steps:
+  - slot_was_set:
+    - number: 71
+  - intent: greet
+  - action: utter_greet
+  - action: utter_age
+  - intent: how_are_you
+  - action: utter_how_are_you
+  - action: utter_age
+  - intent: tell_age
+    entities:
+    - number: 70
+  - slot_was_set:
+    - number: 70
+  - action: action_check_age
+  - intent: affirm
+  - action: utter_transfer
