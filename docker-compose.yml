@@ -9,7 +9,7 @@ services:
           - ./models:/app/models
           - ./data:/app/data
           - ./src:/app/src
-        command: ["sudo,""rasa","x","--no-prompt"]
+        command: ["sudo","rasa","x","--no-prompt"]
         environment:
           - RASA_X_PASSWORD=puretalk
         ports:
